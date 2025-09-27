@@ -24,7 +24,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a
+            href="#home"
+            aria-label="Go to Home"
+            className="flex items-center space-x-3 cursor-pointer"
+          >
             <img
               src="https://harmless-tapir-303.convex.cloud/api/storage/be54b190-14b5-4580-83c2-bc6ed6f9df87"
               alt="BVIMIT Logo"
@@ -34,7 +38,7 @@ export default function Navbar() {
               <h1 className="text-xl font-bold text-gray-900">BVIMIT</h1>
               <p className="text-xs text-gray-600">Navi Mumbai</p>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
