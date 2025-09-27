@@ -21,6 +21,9 @@ export default function Departments() {
     },
   ];
 
+  const previewImage =
+    "https://harmless-tapir-303.convex.cloud/api/storage/82fc4f4b-e1a0-411e-8ac6-40b7d1acea9d";
+
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "text-blue-600 bg-blue-50 border-blue-200",
@@ -53,45 +56,77 @@ export default function Departments() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {departments.map((dept, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group"
-            >
-              <div className={`inline-flex p-4 rounded-xl mb-6 ${getColorClasses(dept.color)}`}>
-                <dept.icon className="h-8 w-8" />
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
-                {dept.title}
-              </h3>
-
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {dept.description}
-              </p>
-
-              <div className="space-y-2 mb-6">
-                {dept.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center text-sm text-gray-700">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                    {feature}
+        {departments.map((dept, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="group relative max-w-6xl mx-auto"
+          >
+            {/* Gradient border effect */}
+            <div className="p-[1px] rounded-3xl bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30">
+              <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 p-6 md:p-10">
+                  {/* Left: Visual preview with floating badge */}
+                  <div className="relative w-full md:w-[42%]">
+                    <div className="rounded-2xl overflow-hidden h-56 md:h-64">
+                      <img
+                        src={previewImage}
+                        alt="MCA preview"
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                    <div className="absolute -top-3 -left-3 bg-primary text-white px-3 py-2 rounded-xl shadow-md flex items-center gap-2">
+                      <dept.icon className="h-4 w-4" />
+                      <span className="text-xs font-semibold">MCA</span>
+                    </div>
+                    {/* Subtle animated glow */}
+                    <motion.div
+                      aria-hidden
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      className="absolute inset-0 rounded-2xl pointer-events-none"
+                      style={{
+                        boxShadow: "0 0 0px rgba(0,0,0,0)",
+                      }}
+                    />
                   </div>
-                ))}
-              </div>
 
-              <a href="#contact">
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
-                  Learn More
-                </Button>
-              </a>
-            </motion.div>
-          ))}
-        </div>
+                  {/* Right: Content */}
+                  <div className="w-full md:flex-1">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
+                      {dept.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      {dept.description}
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                      {dept.features.map((feature, i) => (
+                        <div key={i} className="flex items-center text-sm text-gray-800">
+                          <span className="w-2 h-2 rounded-full bg-primary mr-3 group-hover:animate-pulse" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    <a href="#contact">
+                      <Button
+                        variant="outline"
+                        className="group/button hover:bg-primary hover:text-white transition-colors"
+                      >
+                        Learn More
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
