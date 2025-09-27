@@ -9,8 +9,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="College Campus"
+          src="https://harmless-tapir-303.convex.cloud/api/storage/cd3b09ab-5cb5-4156-af46-3406f0baa7ed"
+          alt="BVIMIT Campus"
           className="w-full h-full object-cover"
         />
       </div>
