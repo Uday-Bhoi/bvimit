@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const quickLinks = [
@@ -21,11 +21,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", color: "hover:text-blue-600" },
-    { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-    { icon: Instagram, href: "#", color: "hover:text-pink-600" },
-    { icon: Linkedin, href: "#", color: "hover:text-blue-700" },
-    { icon: Youtube, href: "#", color: "hover:text-red-600" }
+    { icon: Facebook, href: "https://www.facebook.com/bvimit/", color: "hover:text-blue-600" },
+    { icon: Instagram, href: "https://www.instagram.com/bharatividyapeeths_imit_mca/", color: "hover:text-pink-600" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/bharati-vidyapeeth-institute-of-management-and-information-technology-705802225/", color: "hover:text-blue-700" }
   ];
 
   return (
