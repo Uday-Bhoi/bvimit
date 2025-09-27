@@ -14,6 +14,9 @@ export default function Navbar() {
     { name: "Placements", href: "#placements" },
     { name: "Contact", href: "#contact" },
   ];
+  // Add: celebratory badge image for header
+  const jubileeBadgeUrl =
+    "https://harmless-tapir-303.convex.cloud/api/storage/034165cd-4008-45ba-87f2-3daa320467ce";
 
   return (
     <motion.nav
@@ -51,7 +54,14 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-            <a href="#contact" className="ml-4">
+            {/* Celebrating 50 & Beyond badge */}
+            <img
+              src={jubileeBadgeUrl}
+              alt="Bharati Vidyapeeth - Celebrating 50 and Beyond"
+              title="Celebrating 50 and Beyond"
+              className="h-8 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+            <a href="#contact" className="ml-2">
               <Button size="sm" className="ml-0">
                 Apply Now
               </Button>
@@ -95,6 +105,14 @@ export default function Navbar() {
                     Apply Now
                   </Button>
                 </a>
+              </div>
+              {/* Badge in mobile menu */}
+              <div className="px-3 pt-2 pb-4 flex justify-center">
+                <img
+                  src={jubileeBadgeUrl}
+                  alt="Bharati Vidyapeeth - Celebrating 50 and Beyond"
+                  className="h-10 w-auto opacity-90"
+                />
               </div>
             </div>
           </motion.div>
