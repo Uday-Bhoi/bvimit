@@ -51,9 +51,11 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-            <Button size="sm" className="ml-4">
-              Apply Now
-            </Button>
+            <a href="#contact" className="ml-4">
+              <Button size="sm" className="ml-0">
+                Apply Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -88,9 +90,11 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button size="sm" className="w-full">
-                  Apply Now
-                </Button>
+                <a href="#contact" onClick={() => setIsOpen(false)}>
+                  <Button size="sm" className="w-full">
+                    Apply Now
+                  </Button>
+                </a>
               </div>
             </div>
           </motion.div>
