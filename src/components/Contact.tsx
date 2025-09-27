@@ -159,10 +159,10 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <div className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
-            <div className="aspect-video rounded-xl overflow-hidden">
+          <div className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm max-w-3xl mx-auto">
+            <div className="rounded-xl overflow-hidden h-56 md:h-72">
               <iframe
-                src="https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA"
+                src="https://www.google.com/maps?q=BVIMIT%20Sector%208%20C.B.D.%20Belapur%2C%20Navi%20Mumbai%20400614&output=embed"
                 title="BVIMIT Location Map"
                 className="w-full h-full border-0"
                 loading="lazy"
