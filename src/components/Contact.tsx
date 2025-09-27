@@ -160,12 +160,24 @@ export default function Contact() {
           className="mt-16"
         >
           <div className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
-            <div className="aspect-video bg-gray-200 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-500">Interactive Map</p>
-                <p className="text-sm text-gray-400">Sector 8, CBD Belapur, Navi Mumbai</p>
-              </div>
+            <div className="aspect-video rounded-xl overflow-hidden">
+              <iframe
+                src="https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA"
+                title="BVIMIT Location Map"
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="mt-3 text-center">
+              <a
+                href="https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </motion.div>
