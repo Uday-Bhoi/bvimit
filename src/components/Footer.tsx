@@ -122,21 +122,41 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-gray-400 mt-1 flex-shrink-0" />
+                <a
+                  href="https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open address in Google Maps"
+                  className="mt-1 flex-shrink-0"
+                >
+                  <MapPin className="h-5 w-5 text-gray-400" />
+                </a>
                 <div className="text-gray-300">
                   <p>Sector 8, C.B.D. Belapur</p>
                   <p>Navi Mumbai - 400614</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                <a
+                  href="tel:+912227578415"
+                  aria-label="Call BVIMIT"
+                  className="flex-shrink-0"
+                >
+                  <Phone className="h-5 w-5 text-gray-400" />
+                </a>
                 <div className="text-gray-300">
                   <p>022-27578415</p>
                   <p>+91 8657008016</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                <a
+                  href="mailto:principal.bvimit@bharatividyapeeth.edu"
+                  aria-label="Email BVIMIT"
+                  className="flex-shrink-0"
+                >
+                  <Mail className="h-5 w-5 text-gray-400" />
+                </a>
                 <p className="text-gray-300">principal.bvimit@bharatividyapeeth.edu</p>
               </div>
             </div>

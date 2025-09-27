@@ -91,14 +91,9 @@ export default function Contact() {
                       </a>
                       {info.details.map((detail, idx) => (
                         <div key={idx}>
-                          <a
-                            href={getHref(info.title, detail)}
-                            target={isExternal(info.title) ? "_blank" : undefined}
-                            rel={isExternal(info.title) ? "noopener noreferrer" : undefined}
-                            className="text-gray-600 hover:text-primary hover:underline break-words"
-                          >
+                          <div className="text-gray-600 break-words">
                             {detail}
-                          </a>
+                          </div>
                         </div>
                       ))}
                     </div>
