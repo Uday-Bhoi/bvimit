@@ -42,7 +42,7 @@ export default function Footer() {
           >
             <div className="flex items-center space-x-3">
               <img
-                src="./logo.svg"
+                src="https://harmless-tapir-303.convex.cloud/api/storage/be54b190-14b5-4580-83c2-bc6ed6f9df87"
                 alt="BVIMIT Logo"
                 className="h-12 w-12"
               />
