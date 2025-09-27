@@ -42,74 +42,96 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* BVIMIT THEME - Modern Maroon/Red College Branding */
+/* BVIMIT THEME - Modern Blue/Yellow Branding (aligned with logo) */
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.99 0.005 0);
-  --foreground: oklch(0.15 0.02 0);
+
+  /* Neutrals (cool tint) */
+  --background: oklch(0.99 0.005 250);
+  --foreground: oklch(0.15 0.02 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 0);
+  --card-foreground: oklch(0.15 0.02 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 0);
-  --primary: oklch(0.45 0.15 15); /* Deep maroon/red */
-  --primary-foreground: oklch(0.98 0.01 0);
-  --secondary: oklch(0.96 0.01 0);
-  --secondary-foreground: oklch(0.25 0.02 0);
-  --muted: oklch(0.96 0.01 0);
-  --muted-foreground: oklch(0.55 0.02 0);
-  --accent: oklch(0.94 0.02 15);
-  --accent-foreground: oklch(0.25 0.02 0);
+  --popover-foreground: oklch(0.15 0.02 250);
+
+  /* Brand */
+  --primary: oklch(0.48 0.18 255); /* Royal Blue */
+  --primary-foreground: oklch(0.98 0.01 250);
+  --secondary: oklch(0.96 0.02 250);
+  --secondary-foreground: oklch(0.25 0.02 250);
+
+  /* Support */
+  --muted: oklch(0.96 0.02 250);
+  --muted-foreground: oklch(0.55 0.02 250);
+
+  /* Accent from logo's yellow dot pattern */
+  --accent: oklch(0.88 0.16 95);        /* Vibrant Yellow */
+  --accent-foreground: oklch(0.22 0.04 95);
+
+  /* System */
   --destructive: oklch(0.6 0.2 25);
-  --border: oklch(0.9 0.01 0);
-  --input: oklch(0.94 0.01 0);
-  --ring: oklch(0.45 0.15 15);
-  --chart-1: oklch(0.6 0.15 15);
-  --chart-2: oklch(0.7 0.12 200);
-  --chart-3: oklch(0.5 0.1 280);
-  --chart-4: oklch(0.65 0.14 120);
-  --chart-5: oklch(0.75 0.16 60);
-  --sidebar: oklch(0.98 0.01 0);
-  --sidebar-foreground: oklch(0.15 0.02 0);
-  --sidebar-primary: oklch(0.45 0.15 15);
-  --sidebar-primary-foreground: oklch(0.98 0.01 0);
-  --sidebar-accent: oklch(0.94 0.02 15);
-  --sidebar-accent-foreground: oklch(0.25 0.02 0);
-  --sidebar-border: oklch(0.9 0.01 0);
-  --sidebar-ring: oklch(0.45 0.15 15);
+  --border: oklch(0.9 0.01 250);
+  --input: oklch(0.94 0.01 250);
+  --ring: oklch(0.48 0.18 255);
+
+  /* Charts (harmonized with brand) */
+  --chart-1: oklch(0.55 0.18 255); /* Blue */
+  --chart-2: oklch(0.85 0.16 95);  /* Yellow */
+  --chart-3: oklch(0.6 0.12 280);  /* Indigo */
+  --chart-4: oklch(0.7 0.12 180);  /* Teal */
+  --chart-5: oklch(0.75 0.16 40);  /* Orange */
+
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.01 250);
+  --sidebar-foreground: oklch(0.15 0.02 250);
+  --sidebar-primary: oklch(0.48 0.18 255);
+  --sidebar-primary-foreground: oklch(0.98 0.01 250);
+  --sidebar-accent: oklch(0.9 0.16 95);
+  --sidebar-accent-foreground: oklch(0.22 0.04 95);
+  --sidebar-border: oklch(0.9 0.01 250);
+  --sidebar-ring: oklch(0.48 0.18 255);
 }
 
 .dark {
-  --background: oklch(0.12 0.02 0);
-  --foreground: oklch(0.95 0.01 0);
-  --card: oklch(0.15 0.02 0);
-  --card-foreground: oklch(0.95 0.01 0);
-  --popover: oklch(0.15 0.02 0);
-  --popover-foreground: oklch(0.95 0.01 0);
-  --primary: oklch(0.65 0.18 15); /* Lighter maroon for dark mode */
-  --primary-foreground: oklch(0.12 0.02 0);
-  --secondary: oklch(0.2 0.02 0);
-  --secondary-foreground: oklch(0.95 0.01 0);
-  --muted: oklch(0.2 0.02 0);
-  --muted-foreground: oklch(0.65 0.02 0);
-  --accent: oklch(0.25 0.03 15);
-  --accent-foreground: oklch(0.95 0.01 0);
+  /* Dark neutrals (cool) */
+  --background: oklch(0.12 0.02 250);
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.15 0.02 250);
+  --card-foreground: oklch(0.96 0.01 250);
+  --popover: oklch(0.15 0.02 250);
+  --popover-foreground: oklch(0.96 0.01 250);
+
+  /* Brand in dark */
+  --primary: oklch(0.7 0.16 255); /* Lighter Blue for contrast */
+  --primary-foreground: oklch(0.12 0.02 250);
+  --secondary: oklch(0.22 0.02 250);
+  --secondary-foreground: oklch(0.96 0.01 250);
+
+  --muted: oklch(0.22 0.02 250);
+  --muted-foreground: oklch(0.72 0.02 250);
+
+  --accent: oklch(0.78 0.16 95); /* Deeper Yellow for dark bg */
+  --accent-foreground: oklch(0.15 0.03 95);
+
   --destructive: oklch(0.7 0.2 25);
-  --border: oklch(0.25 0.02 0);
-  --input: oklch(0.2 0.02 0);
-  --ring: oklch(0.65 0.18 15);
-  --chart-1: oklch(0.7 0.18 15);
-  --chart-2: oklch(0.6 0.15 200);
+  --border: oklch(0.28 0.02 250);
+  --input: oklch(0.22 0.02 250);
+  --ring: oklch(0.7 0.16 255);
+
+  --chart-1: oklch(0.72 0.16 255);
+  --chart-2: oklch(0.78 0.16 95);
   --chart-3: oklch(0.75 0.12 280);
-  --chart-4: oklch(0.55 0.16 120);
-  --chart-5: oklch(0.65 0.18 60);
-  --sidebar: oklch(0.15 0.02 0);
-  --sidebar-foreground: oklch(0.95 0.01 0);
-  --sidebar-primary: oklch(0.65 0.18 15);
-  --sidebar-primary-foreground: oklch(0.12 0.02 0);
-  --sidebar-accent: oklch(0.25 0.03 15);
-  --sidebar-accent-foreground: oklch(0.95 0.01 0);
-  --sidebar-border: oklch(0.25 0.02 0);
-  --sidebar-ring: oklch(0.65 0.18 15);
+  --chart-4: oklch(0.65 0.12 180);
+  --chart-5: oklch(0.7 0.16 40);
+
+  --sidebar: oklch(0.15 0.02 250);
+  --sidebar-foreground: oklch(0.96 0.01 250);
+  --sidebar-primary: oklch(0.7 0.16 255);
+  --sidebar-primary-foreground: oklch(0.12 0.02 250);
+  --sidebar-accent: oklch(0.3 0.04 95);
+  --sidebar-accent-foreground: oklch(0.96 0.01 250);
+  --sidebar-border: oklch(0.28 0.02 250);
+  --sidebar-ring: oklch(0.7 0.16 255);
 }
 
 @layer base {
@@ -136,15 +158,15 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: oklch(0.96 0.01 0);
+    background: oklch(0.96 0.02 250);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.45 0.15 15);
+    background: oklch(0.48 0.18 255);
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.35 0.15 15);
+    background: oklch(0.42 0.18 255);
   }
 }
