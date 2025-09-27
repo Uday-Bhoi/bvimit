@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Database, Globe, Smartphone, Brain, Shield } from "lucide-react";
+import { Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Departments() {
@@ -7,45 +7,18 @@ export default function Departments() {
     {
       icon: Code,
       title: "Master of Computer Applications (MCA)",
-      description: "Comprehensive 2-year program focusing on software development, system analysis, and IT management.",
-      features: ["NBA Accredited", "Industry-Aligned Curriculum", "Practical Training"],
-      color: "blue"
+      description:
+        "A two-year, four-semester professional postgraduate program focused on software engineering, data structures & algorithms, databases, web & mobile technologies, AI/ML foundations, and project-based learning aligned with industry needs.",
+      features: [
+        "NBA Accredited",
+        "Affiliated to University of Mumbai",
+        "Intake: 120",
+        "Duration: 2 Years (4 Semesters)",
+        "Industry Internship & Capstone",
+        "Strong Placement Support",
+      ],
+      color: "blue",
     },
-    {
-      icon: Database,
-      title: "Data Science & Analytics",
-      description: "Specialized courses in big data, machine learning, and business intelligence.",
-      features: ["Hands-on Projects", "Industry Mentorship", "Research Opportunities"],
-      color: "green"
-    },
-    {
-      icon: Globe,
-      title: "Web Technologies",
-      description: "Modern web development using latest frameworks and technologies.",
-      features: ["Full-Stack Development", "Cloud Computing", "DevOps Practices"],
-      color: "purple"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile application development.",
-      features: ["iOS & Android", "React Native", "Flutter"],
-      color: "orange"
-    },
-    {
-      icon: Brain,
-      title: "Artificial Intelligence",
-      description: "AI and machine learning with practical applications in various domains.",
-      features: ["Deep Learning", "Computer Vision", "NLP"],
-      color: "red"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Information security, ethical hacking, and digital forensics.",
-      features: ["Network Security", "Penetration Testing", "Compliance"],
-      color: "indigo"
-    }
   ];
 
   const getColorClasses = (color: string) => {
@@ -55,7 +28,7 @@ export default function Departments() {
       purple: "text-purple-600 bg-purple-50 border-purple-200",
       orange: "text-orange-600 bg-orange-50 border-orange-200",
       red: "text-red-600 bg-red-50 border-red-200",
-      indigo: "text-indigo-600 bg-indigo-50 border-indigo-200"
+      indigo: "text-indigo-600 bg-indigo-50 border-indigo-200",
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
@@ -71,10 +44,12 @@ export default function Departments() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Departments & Courses
+            Master of Computer Applications (MCA)
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive range of programs designed to meet the evolving demands of the IT industry.
+            BVIMIT's flagship MCA program delivers an industry-aligned curriculum with hands-on learning,
+            strong fundamentals, internships, and placements—preparing you for roles in software development,
+            data engineering, QA, DevOps, and more.
           </p>
         </motion.div>
 
@@ -91,15 +66,15 @@ export default function Departments() {
               <div className={`inline-flex p-4 rounded-xl mb-6 ${getColorClasses(dept.color)}`}>
                 <dept.icon className="h-8 w-8" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
                 {dept.title}
               </h3>
-              
+
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {dept.description}
               </p>
-              
+
               <div className="space-y-2 mb-6">
                 {dept.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center text-sm text-gray-700">
@@ -108,10 +83,12 @@ export default function Departments() {
                   </div>
                 ))}
               </div>
-              
-              <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
-                Learn More
-              </Button>
+
+              <a href="#contact">
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  Learn More
+                </Button>
+              </a>
             </motion.div>
           ))}
         </div>
