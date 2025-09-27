@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Departments from "@/components/Departments";
+import Syllabus from "@/components/Syllabus";
 import Announcements from "@/components/Announcements";
 import Placements from "@/components/Placements";
 import Contact from "@/components/Contact";
@@ -20,6 +21,7 @@ export default function Landing() {
       <Hero />
       <About />
       <Departments />
+      <Syllabus />
       <Announcements />
       <Placements />
       <Contact />
