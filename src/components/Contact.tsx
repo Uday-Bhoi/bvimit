@@ -91,9 +91,24 @@ export default function Contact() {
                       </a>
                       {info.details.map((detail, idx) => (
                         <div key={idx}>
-                          <div className="text-gray-600 break-words">
-                            {detail}
-                          </div>
+                          {
+                            info.title === "Address" ? (
+                              // Keep address details as plain, non-clickable text
+                              <div className="text-gray-600 break-words">
+                                {detail}
+                              </div>
+                            ) : (
+                              // Make Phone, Email, and Website details clickable
+                              <a
+                                href={getHref(info.title, detail)}
+                                target={isExternal(info.title) ? "_blank" : undefined}
+                                rel={isExternal(info.title) ? "noopener noreferrer" : undefined}
+                                className="text-gray-600 break-words hover:underline"
+                              >
+                                {detail}
+                              </a>
+                            )
+                          }
                         </div>
                       ))}
                     </div>

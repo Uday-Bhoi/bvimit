@@ -145,8 +145,8 @@ export default function Footer() {
                   <Phone className="h-5 w-5 text-gray-400" />
                 </a>
                 <div className="text-gray-300">
-                  <p>022-27578415</p>
-                  <p>+91 8657008016</p>
+                  <a href="tel:+912227578415" className="hover:underline block">022-27578415</a>
+                  <a href="tel:+918657008016" className="hover:underline block">+91 8657008016</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -157,7 +157,12 @@ export default function Footer() {
                 >
                   <Mail className="h-5 w-5 text-gray-400" />
                 </a>
-                <p className="text-gray-300">principal.bvimit@bharatividyapeeth.edu</p>
+                <a
+                  href="mailto:principal.bvimit@bharatividyapeeth.edu"
+                  className="text-gray-300 hover:underline"
+                >
+                  principal.bvimit@bharatividyapeeth.edu
+                </a>
               </div>
             </div>
           </motion.div>
