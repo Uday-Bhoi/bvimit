@@ -58,6 +58,8 @@ export default function Footer() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`p-2 bg-gray-800 rounded-lg transition-colors duration-200 ${social.color}`}
                 >
                   <social.icon className="h-5 w-5" />
