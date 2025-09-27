@@ -25,7 +25,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <a
             href="#home"
@@ -35,11 +35,11 @@ export default function Navbar() {
             <img
               src="https://harmless-tapir-303.convex.cloud/api/storage/be54b190-14b5-4580-83c2-bc6ed6f9df87"
               alt="BVIMIT Logo"
-              className="h-10 w-10"
+              className="h-14 w-14"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900">BVIMIT</h1>
-              <p className="text-xs text-gray-600">Navi Mumbai</p>
+              <h1 className="text-2xl font-bold text-gray-900">BVIMIT</h1>
+              <p className="text-sm text-gray-600">Navi Mumbai</p>
             </div>
           </a>
 
@@ -59,7 +59,7 @@ export default function Navbar() {
               src={jubileeBadgeUrl}
               alt="Bharati Vidyapeeth - Celebrating 50 and Beyond"
               title="Celebrating 50 and Beyond"
-              className="h-8 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              className="h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
             <a href="#contact" className="ml-2">
               <Button size="sm" className="ml-0">
@@ -111,7 +111,7 @@ export default function Navbar() {
                 <img
                   src={jubileeBadgeUrl}
                   alt="Bharati Vidyapeeth - Celebrating 50 and Beyond"
-                  className="h-10 w-auto opacity-90"
+                  className="h-12 w-auto opacity-90"
                 />
               </div>
             </div>
