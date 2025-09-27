@@ -28,6 +28,17 @@ export default function Contact() {
     }
   ];
 
+  // Add: mapping helpers for actionable links
+  const mapsUrl = "https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA";
+  const getHref = (title: string, value: string) => {
+    if (title === "Address") return mapsUrl;
+    if (title === "Phone") return `tel:${value.replace(/[^+\d]/g, "")}`;
+    if (title === "Email") return `mailto:${value}`;
+    if (title === "Website") return value.startsWith("http") ? value : `https://${value}`;
+    return "#";
+  };
+  const isExternal = (title: string) => title === "Address" || title === "Website";
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,13 +71,35 @@ export default function Contact() {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-3 bg-primary/10 rounded-lg">
+                    <a
+                      href={getHref(info.title, info.details[0])}
+                      target={isExternal(info.title) ? "_blank" : undefined}
+                      rel={isExternal(info.title) ? "noopener noreferrer" : undefined}
+                      className="flex-shrink-0 p-3 bg-primary/10 rounded-lg cursor-pointer"
+                      aria-label={info.title}
+                    >
                       <info.icon className="h-6 w-6 text-primary" />
-                    </div>
+                    </a>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
+                      <a
+                        href={getHref(info.title, info.details[0])}
+                        target={isExternal(info.title) ? "_blank" : undefined}
+                        rel={isExternal(info.title) ? "noopener noreferrer" : undefined}
+                        className="font-semibold text-gray-900 mb-2 inline-block hover:underline cursor-pointer"
+                      >
+                        {info.title}
+                      </a>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-gray-600">{detail}</p>
+                        <div key={idx}>
+                          <a
+                            href={getHref(info.title, detail)}
+                            target={isExternal(info.title) ? "_blank" : undefined}
+                            rel={isExternal(info.title) ? "noopener noreferrer" : undefined}
+                            className="text-gray-600 hover:text-primary hover:underline break-words"
+                          >
+                            {detail}
+                          </a>
+                        </div>
                       ))}
                     </div>
                   </div>
