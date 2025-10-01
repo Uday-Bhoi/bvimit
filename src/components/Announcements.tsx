@@ -8,37 +8,43 @@ export default function Announcements() {
       title: "MCA Online Application Form for 2025-26 Admission",
       date: "January 2025",
       type: "Admission",
-      urgent: true
+      urgent: true,
+      link: "#"
     },
     {
       title: "FRA Approved Fees for MCA 2025-26",
       date: "January 2025",
       type: "Fee Structure",
-      urgent: true
+      urgent: true,
+      link: "/assets/fra-fees25-26.pdf"
     },
     {
       title: "MCA Brochure 2025-26 Available",
       date: "January 2025",
       type: "Information",
-      urgent: false
+      urgent: false,
+      link: "#"
     },
     {
       title: "Scholarships Details 2025-2026",
       date: "January 2025",
       type: "Scholarship",
-      urgent: false
+      urgent: false,
+      link: "#"
     },
     {
       title: "Industrial Visit to RedHat Bengaluru",
       date: "December 2024",
       type: "Event",
-      urgent: false
+      urgent: false,
+      link: "#"
     },
     {
       title: "International Conference ICET 2024",
       date: "June 2024",
       type: "Conference",
-      urgent: false
+      urgent: false,
+      link: "#"
     }
   ];
 
@@ -107,10 +113,16 @@ export default function Announcements() {
                   <Calendar className="h-4 w-4 mr-2" />
                   {announcement.date}
                 </div>
-                <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-                  View Details
-                  <ExternalLink className="h-4 w-4 ml-2" />
-                </Button>
+                <a
+                  href={announcement.link}
+                  target={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "_blank" : undefined}
+                  rel={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "noopener noreferrer" : undefined}
+                >
+                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
+                    View Details
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </Button>
+                </a>
               </div>
             </motion.div>
           ))}
