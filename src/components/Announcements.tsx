@@ -16,7 +16,7 @@ export default function Announcements() {
       date: "January 2025",
       type: "Fee Structure",
       urgent: true,
-      link: "/assets/fra-fees25-26.pdf"
+      link: "https://bvimit.co.in/bvimit/pdf/fra-fees25-26.pdf"
     },
     {
       title: "MCA Brochure 2025-26 Available",
