@@ -16,7 +16,7 @@ export default function Announcements() {
       date: "January 2025",
       type: "Information",
       urgent: false,
-      link: "#"
+      link: "https://bvimit.co.in/bvimit/pdf/MCABrochure2025.pdf"
     },
     {
       title: "Scholarships Details 2025-2026",
@@ -73,13 +73,16 @@ export default function Announcements() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {announcements.map((announcement, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={announcement.link}
+              target={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "_blank" : undefined}
+              rel={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 group"
+              className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 group cursor-pointer block"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
@@ -106,18 +109,12 @@ export default function Announcements() {
                   <Calendar className="h-4 w-4 mr-2" />
                   {announcement.date}
                 </div>
-                <a
-                  href={announcement.link}
-                  target={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "_blank" : undefined}
-                  rel={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "noopener noreferrer" : undefined}
-                >
-                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-                    View Details
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </Button>
-                </a>
+                <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 pointer-events-none">
+                  View Details
+                  <ExternalLink className="h-4 w-4 ml-2" />
+                </Button>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
