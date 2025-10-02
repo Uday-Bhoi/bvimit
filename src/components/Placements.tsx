@@ -42,6 +42,20 @@ export default function Placements() {
     }
   ];
 
+  const companyLogos = [
+    "https://harmless-tapir-303.convex.cloud/api/storage/8355377a-f356-4a02-83dd-1cb6b4038f23",
+    "https://harmless-tapir-303.convex.cloud/api/storage/635b8350-7422-44d6-9d35-5fb8fb02cafd",
+    "https://harmless-tapir-303.convex.cloud/api/storage/34c864a0-d4be-4831-afa6-a9726103811b",
+    "https://harmless-tapir-303.convex.cloud/api/storage/3dfd0b6f-c953-4deb-b03e-34bccc342831",
+    "https://harmless-tapir-303.convex.cloud/api/storage/6235a095-3a80-45fe-8a9c-d82fe1cb9b5e",
+    "https://harmless-tapir-303.convex.cloud/api/storage/72eeee92-6aed-4f2f-84ec-cbd9bd147d12",
+    "https://harmless-tapir-303.convex.cloud/api/storage/5ce9ae7d-4cb3-4ac3-b2c4-78a1edeb45ab",
+    "https://harmless-tapir-303.convex.cloud/api/storage/7b6e455e-b116-4367-9ae4-cd4ba129aec9",
+    "https://harmless-tapir-303.convex.cloud/api/storage/b05f2886-923a-40ab-bf22-5e72229459fe",
+    "https://harmless-tapir-303.convex.cloud/api/storage/2d967117-5e83-4a26-b9b4-8724f35df734",
+    "https://harmless-tapir-303.convex.cloud/api/storage/9b5c70b3-3ace-43e9-bc43-fafb9a4d0f88"
+  ];
+
   return (
     <section id="placements" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,15 +133,22 @@ export default function Placements() {
           className="mt-16 text-center"
         >
           <h4 className="text-2xl font-bold text-gray-900 mb-8">Our Placement Partners</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-            {/* Placeholder for company logos */}
-            {Array.from({ length: 12 }).map((_, index) => (
-              <div
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
+            {companyLogos.map((logo, index) => (
+              <motion.div
                 key={index}
-                className="h-16 bg-gray-200 rounded-lg flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-all duration-300"
               >
-                <Building2 className="h-8 w-8 text-gray-400" />
-              </div>
+                <img
+                  src={logo}
+                  alt={`Company logo ${index + 1}`}
+                  className="max-h-16 w-auto object-contain"
+                />
+              </motion.div>
             ))}
           </div>
         </motion.div>
