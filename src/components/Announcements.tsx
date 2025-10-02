@@ -23,7 +23,7 @@ export default function Announcements() {
       date: "January 2025",
       type: "Scholarship",
       urgent: false,
-      link: "#"
+      link: "https://bvimit.co.in/bvimit/pdf/Documents%20for%20Scholarship.pdf"
     },
     {
       title: "Industrial Visit to RedHat Bengaluru",
