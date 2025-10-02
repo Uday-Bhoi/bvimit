@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 export default function Announcements() {
   const announcements = [
     {
-      title: "FRA Approved Fees for MCA 2025-26",
+      title: "MCA First Year Fee Structure for Academic year 2025-2026!",
       date: "January 2025",
       type: "Fee Structure",
       urgent: true,
-      link: "https://bvimit.co.in/bvimit/pdf/fra-fees25-26.pdf"
+      link: "https://bvimit.co.in/bvimit/pdf/Fee%20Structure%201%20st%20Year%20Academic%202025-2026.pdf"
     },
     {
       title: "MCA Brochure 2025-26 Available",
