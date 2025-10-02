@@ -5,13 +5,6 @@ import { Button } from "@/components/ui/button";
 export default function Announcements() {
   const announcements = [
     {
-      title: "MCA Online Application Form for 2025-26 Admission",
-      date: "January 2025",
-      type: "Admission",
-      urgent: true,
-      link: "#"
-    },
-    {
       title: "FRA Approved Fees for MCA 2025-26",
       date: "January 2025",
       type: "Fee Structure",
