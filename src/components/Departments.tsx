@@ -22,7 +22,7 @@ export default function Departments() {
   ];
 
   const previewImage =
-    "https://harmless-tapir-303.convex.cloud/api/storage/82fc4f4b-e1a0-411e-8ac6-40b7d1acea9d";
+    "https://harmless-tapir-303.convex.cloud/api/storage/02609857-55d3-4923-acc1-29de8afe7685";
 
   const getColorClasses = (color: string) => {
     const colors = {
