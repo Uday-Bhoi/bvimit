@@ -33,13 +33,6 @@ function AnimatedCounter({ end, duration = 2 }: { end: number; duration?: number
 }
 
 export default function About() {
-  const missions = [
-    "To prepare students for careers in the industry and pursue research in all branches of computing field through effective teaching learning process.",
-    "To strengthen the industry institute interaction by providing up-to-date programs.",
-    "To imbibe amongst the students ethical usage of technical knowledge beneficial to the society.",
-    "To provide an environment that fosters a framework for promoting collaborative and multidisciplinary activities."
-  ];
-
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative background elements */}
@@ -73,65 +66,52 @@ export default function About() {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Bharati Vidyapeeth is an institution planted in the year 1964 by our founder Dr. Patangrao Kadam. 
             During the last 55 years, Bharati Vidyapeeth has made astonishing strides in the field of education, 
-            particularly, higher and professional education.
+            particularly, higher and professional education. Today Bharati Vidyapeeth conducts more than 156 educational 
+            units of various kinds, right from pre-primary schools to postgraduate institutions and a full fledged 
+            professional university (BVDU). At Bharati Vidyapeeth, our objective has been to contribute to intellectual 
+            awaking and social transformation in different spheres such as education, economic, social & cultural fields 
+            in India and more particularly in Maharashtra. Information Technology has invaded our society in a very 
+            significant manner. Hence to keep pace with the modern times, the year 2002 marked the establishment of 
+            Bharati Vidyapeeth's Institute of Management & Information Technology. At BVIMIT MCA course, we impart 
+            I.T. Management education to meet the demand of the I.T. Industry.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Vision & Mission with glassmorphism */}
+          {/* Founder's Message */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <motion.div
               whileHover={{ scale: 1.02, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-lg border border-blue-100 backdrop-blur-sm"
             >
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-blue-100 rounded-xl mr-3">
-                  <Eye className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Vision</h3>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Patangrao Kadam</h3>
+                <p className="text-sm text-primary font-semibold">Founder, Bharati Vidyapeeth Deemed University</p>
               </div>
-              <p className="text-lg text-gray-700 italic leading-relaxed">
-                "Social Transformation Through Dynamic Education"
-              </p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.02, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="bg-gradient-to-br from-white to-green-50/50 p-8 rounded-2xl shadow-lg border border-green-100 backdrop-blur-sm"
-            >
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-xl mr-3">
-                  <Target className="h-8 w-8 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Mission</h3>
-              </div>
-              <div className="space-y-4">
-                {missions.map((mission, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start group"
-                  >
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <p className="text-gray-700">{mission}</p>
-                  </motion.div>
-                ))}
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  I am indeed happy to welcome you to MCA Bharati Vidyapeeth's Institute of Management & Information 
+                  Technology, Navi Mumbai, which has a large pool of new executive talent waiting to step into the 
+                  Corporate World.
+                </p>
+                <p>
+                  I established Bharati Vidyapeeth in 1964 with a realization that all-round social transformation 
+                  can be brought about through the spread of education. During the last 55 years, we have established 
+                  more than 156 educational units of various kinds, right from Pre-Primary School to a full-fledged 
+                  University.
+                </p>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Image and Animated Stats */}
+          {/* Founder's Image and Stats */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,8 +126,8 @@ export default function About() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Students in classroom"
+                src="https://harmless-tapir-303.convex.cloud/api/storage/9a35e636-a4eb-419e-ba2b-edb716eef88b"
+                alt="Dr. Patangrao Kadam - Founder, Bharati Vidyapeeth"
                 className="relative w-full h-80 object-cover rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
