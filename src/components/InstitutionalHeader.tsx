@@ -14,7 +14,7 @@ export default function InstitutionalHeader() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo and Institution Name Row */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-2">
           {/* Left: BVIMIT Logo */}
           <img
             src="https://harmless-tapir-303.convex.cloud/api/storage/3bc7ee19-7c8c-4de2-ad0e-336720ea334c"
@@ -24,10 +24,10 @@ export default function InstitutionalHeader() {
 
           {/* Center: Institution Name */}
           <div className="flex-1 text-center px-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight">
               Bharati Vidyapeeth's
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-primary">
               Institute of Management & Information Technology
             </h2>
           </div>
@@ -42,13 +42,13 @@ export default function InstitutionalHeader() {
         </div>
 
         {/* Location */}
-        <div className="flex items-center justify-center text-gray-600 mb-4">
+        <div className="flex items-center justify-center text-gray-600 mb-2">
           <MapPin className="h-4 w-4 mr-2 text-primary" />
           <p className="text-base md:text-lg">Navi Mumbai, Mumbai</p>
         </div>
 
         {/* Accreditation & Affiliation Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-3">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-2">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
