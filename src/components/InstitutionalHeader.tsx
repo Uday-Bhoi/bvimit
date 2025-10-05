@@ -10,7 +10,7 @@ export default function InstitutionalHeader() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-gradient-to-r from-primary/5 via-white to-accent/5 border-b border-gray-200 py-6"
+      className="bg-gradient-to-r from-primary/5 via-white to-accent/5 border-b border-gray-200 py-4"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo and Institution Name Row */}
@@ -51,30 +51,30 @@ export default function InstitutionalHeader() {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1 px-2.5 py-1 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Award className="h-3.5 w-3.5 text-green-600" />
-            <span className="text-xs font-medium text-gray-700">
+            <Award className="h-3 w-3 text-green-600" />
+            <span className="text-[10px] md:text-xs font-medium text-gray-700">
               AICTE Approved
             </span>
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1 px-2.5 py-1 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Building2 className="h-3.5 w-3.5 text-blue-600" />
-            <span className="text-xs font-medium text-gray-700">
+            <Building2 className="h-3 w-3 text-blue-600" />
+            <span className="text-[10px] md:text-xs font-medium text-gray-700">
               University of Mumbai Affiliated
             </span>
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1 px-2.5 py-1 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Award className="h-3.5 w-3.5 text-purple-600" />
-            <span className="text-xs font-medium text-gray-700">
+            <Award className="h-3 w-3 text-purple-600" />
+            <span className="text-[10px] md:text-xs font-medium text-gray-700">
               NBA Accredited till June 2023
             </span>
           </motion.div>
