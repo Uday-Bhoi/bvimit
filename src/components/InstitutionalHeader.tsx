@@ -17,7 +17,7 @@ export default function InstitutionalHeader() {
         <div className="flex items-center justify-between mb-2">
           {/* Left: BVIMIT Logo */}
           <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/3bc7ee19-7c8c-4de2-ad0e-336720ea334c"
+            src="https://harmless-tapir-303.convex.cloud/api/storage/f6eeb27c-af0b-41c3-b2f9-f31da24cc3c8"
             alt="BVIMIT Logo"
             className="h-32 w-32 md:h-40 md:w-40 object-contain"
           />
