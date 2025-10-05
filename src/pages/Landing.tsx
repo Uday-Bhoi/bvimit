@@ -22,8 +22,8 @@ export default function Landing() {
       <Navbar />
       <Hero />
       <About />
-      <Departments />
-      <Syllabus />
+      {/* <Departments /> */}
+      {/* <Syllabus /> */}
       <Announcements />
       <Placements />
       <Contact />
