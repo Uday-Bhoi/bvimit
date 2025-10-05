@@ -47,7 +47,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 items-stretch">
           {/* Founder's Message */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
