@@ -103,11 +103,11 @@ export default function Events() {
           className="max-w-6xl mx-auto"
         >
           <Carousel
-            setApi={setApi}
             opts={{
               align: "center",
               loop: true,
             }}
+            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -125,17 +125,19 @@ export default function Events() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
+                      animate={{
+                        scale: isActive ? 1.05 : 0.95,
+                        opacity: isActive ? 1 : 0.7,
+                      }}
                       className="p-2"
                     >
-                      <div 
-                        className={`relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 ${
-                          isActive ? "scale-105 shadow-2xl" : "scale-95 opacity-75"
-                        }`}
-                      >
+                      <div className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                         <img
                           src={event.image}
                           alt={event.title}
-                          className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                          className={`w-full object-cover transition-all duration-500 ${
+                            isActive ? "h-96" : "h-80"
+                          } group-hover:scale-110`}
                         />
                         {/* Gradient overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
