@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (
@@ -46,25 +47,25 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Founder's Message */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col"
           >
             <motion.div
               whileHover={{ scale: 1.02, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-lg border border-blue-100 backdrop-blur-sm"
+              className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-lg border border-blue-100 backdrop-blur-sm flex-1 flex flex-col"
             >
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Patangrao Kadam</h3>
                 <p className="text-sm text-primary font-semibold">Founder, Bharati Vidyapeeth Deemed University</p>
               </div>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 leading-relaxed flex-1">
                 <p>
                   I am indeed happy to welcome you to MCA Bharati Vidyapeeth's Institute of Management & Information 
                   Technology, Navi Mumbai, which has a large pool of new executive talent waiting to step into the 
@@ -77,6 +78,11 @@ export default function About() {
                   University.
                 </p>
               </div>
+              <div className="mt-6">
+                <Button variant="outline" className="w-full">
+                  Read more...
+                </Button>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -86,10 +92,10 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 flex flex-col"
           >
             <motion.div 
-              className="relative group"
+              className="relative group flex-1 flex items-center justify-center"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -97,7 +103,7 @@ export default function About() {
               <img
                 src="https://harmless-tapir-303.convex.cloud/api/storage/9a35e636-a4eb-419e-ba2b-edb716eef88b"
                 alt="Dr. Patangrao Kadam - Founder, Bharati Vidyapeeth"
-                className="relative w-full h-[500px] object-cover rounded-2xl shadow-lg"
+                className="relative w-auto h-full max-h-full object-contain rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
             </motion.div>
