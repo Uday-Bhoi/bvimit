@@ -31,7 +31,7 @@ export default function About() {
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About BVIMIT
+            BVIMIT
           </h2>
           <p className="text-base text-gray-600 max-w-6xl mx-auto leading-relaxed text-justify">
             Bharati Vidyapeeth is an institution planted in the year 1964 by our founder Dr. Patangrao Kadam. 
@@ -95,7 +95,7 @@ export default function About() {
             className="space-y-8 flex flex-col"
           >
             <motion.div 
-              className="relative group flex-1 flex items-center justify-center"
+              className="relative group w-fit h-fit mx-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -103,7 +103,7 @@ export default function About() {
               <img
                 src="https://harmless-tapir-303.convex.cloud/api/storage/9a35e636-a4eb-419e-ba2b-edb716eef88b"
                 alt="Dr. Patangrao Kadam - Founder, Bharati Vidyapeeth"
-                className="relative w-auto h-full max-h-full object-contain rounded-2xl shadow-lg"
+                className="relative rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
             </motion.div>
