@@ -12,6 +12,7 @@ export default function Navbar() {
     // { name: "Departments", href: "#departments" },
     // { name: "Syllabus", href: "#syllabus" },
     { name: "Events", href: "#events" },
+    { name: "Research", href: "#research" },
     { name: "Admissions", href: "#admissions" },
     { name: "Placements", href: "#placements" },
     { name: "Contact", href: "#contact" },
