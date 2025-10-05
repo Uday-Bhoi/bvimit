@@ -3,7 +3,7 @@ import { Award, Building2, MapPin } from "lucide-react";
 
 export default function InstitutionalHeader() {
   const jubileeBadgeUrl =
-    "https://harmless-tapir-303.convex.cloud/api/storage/6bedc097-1402-432d-9808-4e4334ac9219";
+    "https://harmless-tapir-303.convex.cloud/api/storage/03f7eaa4-cf08-4a47-8861-18f37039e935";
 
   return (
     <motion.section
