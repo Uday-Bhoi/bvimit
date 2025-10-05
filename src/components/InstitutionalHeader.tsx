@@ -31,7 +31,7 @@ export default function InstitutionalHeader() {
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
             <Award className="h-4 w-4 text-green-600" />
-            <span className="text-sm font-medium text-green-700">
+            <span className="text-sm font-medium text-gray-700">
               AICTE Approved
             </span>
           </motion.div>
@@ -41,7 +41,7 @@ export default function InstitutionalHeader() {
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
             <Building2 className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-medium text-blue-700">
+            <span className="text-sm font-medium text-gray-700">
               University of Mumbai Affiliated
             </span>
           </motion.div>
@@ -51,7 +51,7 @@ export default function InstitutionalHeader() {
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
             <Award className="h-4 w-4 text-purple-600" />
-            <span className="text-sm font-medium text-purple-700">
+            <span className="text-sm font-medium text-gray-700">
               NBA Accredited till June 2023
             </span>
           </motion.div>
