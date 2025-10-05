@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Events() {
   const [api, setApi] = useState<CarouselApi>();
@@ -96,17 +97,23 @@ export default function Events() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
           <Carousel
             opts={{
               align: "center",
-              loop: true,
+              loop: false,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
             setApi={setApi}
             className="w-full"
           >
@@ -120,16 +127,12 @@ export default function Events() {
                       isActive ? "md:basis-1/2" : "md:basis-1/3"
                     }`}
                   >
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      animate={{
-                        scale: isActive ? 1.05 : 0.95,
+                    <div
+                      className="p-2 transition-all duration-500"
+                      style={{
+                        transform: isActive ? "scale(1.05)" : "scale(0.95)",
                         opacity: isActive ? 1 : 0.7,
                       }}
-                      className="p-2"
                     >
                       <div className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                         <img
@@ -152,7 +155,7 @@ export default function Events() {
                           </p>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   </CarouselItem>
                 );
               })}
