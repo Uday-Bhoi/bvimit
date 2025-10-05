@@ -44,37 +44,37 @@ export default function InstitutionalHeader() {
         {/* Location */}
         <div className="flex items-center justify-center text-gray-600 mb-2">
           <MapPin className="h-4 w-4 mr-2 text-primary" />
-          <p className="text-base md:text-lg">Navi Mumbai, Mumbai</p>
+          <p className="text-sm md:text-base">Navi Mumbai, Mumbai</p>
         </div>
 
         {/* Accreditation & Affiliation Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-2">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Award className="h-4 w-4 text-green-600" />
-            <span className="text-sm font-medium text-gray-700">
+            <Award className="h-3.5 w-3.5 text-green-600" />
+            <span className="text-xs font-medium text-gray-700">
               AICTE Approved
             </span>
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Building2 className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-medium text-gray-700">
+            <Building2 className="h-3.5 w-3.5 text-blue-600" />
+            <span className="text-xs font-medium text-gray-700">
               University of Mumbai Affiliated
             </span>
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-gray-200 shadow-sm"
           >
-            <Award className="h-4 w-4 text-purple-600" />
-            <span className="text-sm font-medium text-gray-700">
+            <Award className="h-3.5 w-3.5 text-purple-600" />
+            <span className="text-xs font-medium text-gray-700">
               NBA Accredited till June 2023
             </span>
           </motion.div>
