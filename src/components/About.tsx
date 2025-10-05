@@ -32,7 +32,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About BVIMIT
           </h2>
-          <p className="text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 max-w-6xl mx-auto leading-relaxed text-justify">
             Bharati Vidyapeeth is an institution planted in the year 1964 by our founder Dr. Patangrao Kadam. 
             During the last 55 years, Bharati Vidyapeeth has made astonishing strides in the field of education, 
             particularly, higher and professional education. Today Bharati Vidyapeeth conducts more than 156 educational 
