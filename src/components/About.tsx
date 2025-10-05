@@ -1,36 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { CheckCircle, Target, Eye, TrendingUp } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
-
-// Animated counter component
-function AnimatedCounter({ end, duration = 2 }: { end: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return;
-    
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
-      setCount(Math.floor(progress * end));
-      
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [isInView, end, duration]);
-
-  return <span ref={ref}>{count}</span>;
-}
+import { useRef } from "react";
 
 export default function About() {
   return (
@@ -63,7 +32,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About BVIMIT
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
             Bharati Vidyapeeth is an institution planted in the year 1964 by our founder Dr. Patangrao Kadam. 
             During the last 55 years, Bharati Vidyapeeth has made astonishing strides in the field of education, 
             particularly, higher and professional education. Today Bharati Vidyapeeth conducts more than 156 educational 
@@ -77,7 +46,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Founder's Message */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -111,7 +80,7 @@ export default function About() {
             </motion.div>
           </motion.div>
 
-          {/* Founder's Image and Stats */}
+          {/* Founder's Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -128,36 +97,10 @@ export default function About() {
               <img
                 src="https://harmless-tapir-303.convex.cloud/api/storage/9a35e636-a4eb-419e-ba2b-edb716eef88b"
                 alt="Dr. Patangrao Kadam - Founder, Bharati Vidyapeeth"
-                className="relative w-full h-80 object-cover rounded-2xl shadow-lg"
+                className="relative w-full h-[500px] object-cover rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
             </motion.div>
-
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { value: 2002, label: "Established", color: "blue", icon: TrendingUp },
-                { value: 100, label: "AICTE Approved", color: "green", suffix: "%" },
-                { value: 1, label: "UoM Affiliated", color: "purple", prefix: "#" },
-                { value: 100, label: "NBA Accredited", color: "red", suffix: "%" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className={`bg-gradient-to-br from-white to-${stat.color}-50 p-6 rounded-xl shadow-md border border-${stat.color}-100 text-center group cursor-pointer`}
-                >
-                  <div className={`text-3xl font-bold text-${stat.color}-600 mb-2 group-hover:scale-110 transition-transform`}>
-                    {stat.prefix}
-                    <AnimatedCounter end={stat.value} />
-                    {stat.suffix}
-                  </div>
-                  <div className="text-gray-600 text-sm">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
