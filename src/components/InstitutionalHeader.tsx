@@ -3,23 +3,23 @@ import { Award, Building2, MapPin } from "lucide-react";
 
 export default function InstitutionalHeader() {
   const jubileeBadgeUrl =
-    "https://harmless-tapir-303.convex.cloud/api/storage/034165cd-4008-45ba-87f2-3daa320467ce";
+    "https://harmless-tapir-303.convex.cloud/api/storage/6bedc097-1402-432d-9808-4e4334ac9219";
 
   return (
     <motion.section
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-gradient-to-r from-primary/5 via-white to-accent/5 border-b border-gray-200 py-6 mt-20"
+      className="bg-gradient-to-r from-primary/5 via-white to-accent/5 border-b border-gray-200 py-6"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo and Institution Name Row */}
         <div className="flex items-center justify-between mb-4">
           {/* Left: BVIMIT Logo */}
           <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/be54b190-14b5-4580-83c2-bc6ed6f9df87"
+            src="https://harmless-tapir-303.convex.cloud/api/storage/3bc7ee19-7c8c-4de2-ad0e-336720ea334c"
             alt="BVIMIT Logo"
-            className="h-24 w-24 md:h-28 md:w-28"
+            className="h-32 w-32 md:h-40 md:w-40 object-contain"
           />
 
           {/* Center: Institution Name */}
@@ -37,7 +37,7 @@ export default function InstitutionalHeader() {
             src={jubileeBadgeUrl}
             alt="Bharati Vidyapeeth - Celebrating 50 and Beyond"
             title="Celebrating 50 and Beyond"
-            className="h-24 w-auto md:h-28 md:w-auto opacity-90 hover:opacity-100 transition-opacity hidden md:block"
+            className="h-32 w-auto md:h-40 md:w-auto object-contain opacity-90 hover:opacity-100 transition-opacity hidden md:block"
           />
         </div>
 
