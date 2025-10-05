@@ -18,8 +18,8 @@ export default function Landing() {
       transition={{ duration: 0.5 }}
       className="min-h-screen"
     >
-      <Navbar />
       <InstitutionalHeader />
+      <Navbar />
       <Hero />
       <About />
       <Departments />
