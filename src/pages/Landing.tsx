@@ -9,6 +9,7 @@ import Announcements from "@/components/Announcements";
 import Placements from "@/components/Placements";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Events from "@/components/Events";
 
 export default function Landing() {
   return (
@@ -24,6 +25,7 @@ export default function Landing() {
       <About />
       {/* <Departments /> */}
       {/* <Syllabus /> */}
+      <Events />
       <Announcements />
       <Placements />
       <Contact />
