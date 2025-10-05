@@ -6,8 +6,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 export default function Events() {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   const events = [
     {
       id: 1,
@@ -84,6 +90,7 @@ export default function Events() {
           className="max-w-6xl mx-auto"
         >
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: "start",
               loop: true,
