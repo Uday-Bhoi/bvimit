@@ -23,7 +23,7 @@ export default function Navbar() {
       className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200"
     >
       <div className="w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14">
+        <div className="flex justify-around items-center h-14">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
             {navItems.map((item) => (
