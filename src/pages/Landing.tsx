@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import InstitutionalHeader from "@/components/InstitutionalHeader";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Departments from "@/components/Departments";
@@ -18,6 +19,7 @@ export default function Landing() {
       className="min-h-screen"
     >
       <Navbar />
+      <InstitutionalHeader />
       <Hero />
       <About />
       <Departments />
