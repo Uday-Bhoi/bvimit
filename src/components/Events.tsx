@@ -1,19 +1,13 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 export default function Events() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-
   const events = [
     {
       id: 1,
@@ -46,20 +40,6 @@ export default function Events() {
       date: "November 18, 2023"
     }
   ];
-
-  const onSelect = useCallback(() => {
-    if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-  }, [api]);
-
-  useEffect(() => {
-    if (!api) return;
-    onSelect();
-    api.on("select", onSelect);
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api, onSelect]);
 
   return (
     <section id="events" className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
@@ -97,68 +77,52 @@ export default function Events() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
           <Carousel
             opts={{
-              align: "center",
-              loop: false,
+              align: "start",
+              loop: true,
             }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-              }),
-            ]}
-            setApi={setApi}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {events.map((event, index) => {
-                const isActive = index === current;
-                return (
-                  <CarouselItem 
-                    key={event.id} 
-                    className={`pl-2 md:pl-4 transition-all duration-500 ${
-                      isActive ? "md:basis-1/2" : "md:basis-1/3"
-                    }`}
+            <CarouselContent>
+              {events.map((event, index) => (
+                <CarouselItem key={event.id} className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    className="p-2"
                   >
-                    <div
-                      className="p-2 transition-all duration-500"
-                      style={{
-                        transform: isActive ? "scale(1.05)" : "scale(0.95)",
-                        opacity: isActive ? 1 : 0.7,
-                      }}
-                    >
-                      <div className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                        <img
-                          src={event.image}
-                          alt={event.title}
-                          className={`w-full object-cover transition-all duration-500 ${
-                            isActive ? "h-96" : "h-80"
-                          } group-hover:scale-110`}
-                        />
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                        
-                        {/* Text overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                          <h3 className="text-xl font-bold mb-2 drop-shadow-lg">
-                            {event.title}
-                          </h3>
-                          <p className="text-sm text-gray-200 drop-shadow-md">
-                            {event.date}
-                          </p>
-                        </div>
+                    <div className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer">
+                      <img
+                        src={event.image}
+                        alt={event.title}
+                        className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      
+                      {/* Text overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-xl font-bold mb-2 drop-shadow-lg">
+                          {event.title}
+                        </h3>
+                        <p className="text-sm text-gray-200 drop-shadow-md">
+                          {event.date}
+                        </p>
                       </div>
                     </div>
-                  </CarouselItem>
-                );
-              })}
+                  </motion.div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious className="left-0 -translate-x-12" />
             <CarouselNext className="right-0 translate-x-12" />
