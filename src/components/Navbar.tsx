@@ -9,8 +9,9 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Departments", href: "#departments" },
-    { name: "Syllabus", href: "#syllabus" },
+    // { name: "Departments", href: "#departments" },
+    // { name: "Syllabus", href: "#syllabus" },
+    { name: "Research", href: "#research" },
     { name: "Admissions", href: "#admissions" },
     { name: "Placements", href: "#placements" },
     { name: "Contact", href: "#contact" },
