@@ -16,93 +16,15 @@ export default function InstitutionalHeader() {
           display: grid;
           grid-template-columns: 1fr 3fr 1fr;
           align-items: center;
-          /* Background color matches the footer (gray-900) */
-          background-color: rgb(17, 24, 39); 
+          background: url('https://media.istockphoto.com/id/1241335697/vector/old-very-light-beige-coloured-smudged-wall-textured-vector-backgrounds.jpg?s=612x612&w=0&k=20&c=ti6j4Fdf2S63Vaxzk9bGvH_HKlKKPhQZx_13XCDx0Cw=');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
           color: white;
           padding: 10px 5px;
         }
 
         .logo,
->>>>>>> REPLACE
-<<<<<<< SEARCH
-        .center-info h1 {
-          margin: 0;
-          font-size: 26px;
-          font-weight: 600;
-          color: #333;
-          letter-spacing: 1px;
-        }
-
-        .center-info h2 {
-          margin: 5px 0;
-          font-size: 28px;
-          font-weight: 700;
-          color: #333;
-          line-height: 1.2;
-        }
-
-        .location {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          color: #333;
-          font-size: 18px;
-          margin-top: 6px;
-        }
-=======
-        .center-info h1 {
-          margin: 0;
-          font-size: 26px;
-          font-weight: 600;
-          color: white;
-          letter-spacing: 1px;
-        }
-
-        .center-info h2 {
-          margin: 5px 0;
-          font-size: 28px;
-          font-weight: 700;
-          color: white;
-          line-height: 1.2;
-        }
-
-        .location {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          color: white;
-          font-size: 18px;
-          margin-top: 6px;
-        }
->>>>>>> REPLACE
-<<<<<<< SEARCH
-        .dte {
-          text-align: center;
-          font-size: 18px;
-          color: #333;
-          font-weight: 500;
-          margin-top: 10px;
-        }
-
-        .dte span {
-          color: #333;
-          font-weight: 600;
-        }
-=======
-        .dte {
-          text-align: center;
-          font-size: 18px;
-          color: white;
-          font-weight: 500;
-          margin-top: 10px;
-        }
-
-        .dte span {
-          color: white;
-          font-weight: 600;
-        }
         .jubilee {
           align-self: stretch;
           display: flex;
