@@ -10,23 +10,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/hooks/use-auth";
 import { Home, LogOut } from "lucide-react";
-import { useNavigate } from "react-router";
+import { useRouter } from "next/navigation";
 
 export function LogoDropdown() {
   const { isAuthenticated, signOut } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleSignOut = async () => {
     try {
       await signOut();
-      navigate("/");
+      router.push("/");
     } catch (error) {
       console.error("Sign out error:", error);
     }
   };
 
   const handleGoHome = () => {
-    navigate("/");
+    router.push("/");
   };
 
   return (
