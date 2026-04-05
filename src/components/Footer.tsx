@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const quickLinks = [
@@ -27,10 +28,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-background text-foreground border-t border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* College Info */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,19 +38,19 @@ export default function Footer() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3 group cursor-pointer transition-opacity hover:opacity-80">
               <img
-                src="https://harmless-tapir-303.convex.cloud/api/storage/be54b190-14b5-4580-83c2-bc6ed6f9df87"
+                src="/assets/images/bharati_logo.png"
                 alt="BVIMIT Logo"
-                className="h-12 w-12"
+                className="h-12 w-12 transition-transform group-hover:scale-105"
               />
               <div>
-                <h3 className="text-xl font-bold">BVIMIT</h3>
-                <p className="text-gray-400 text-sm">Navi Mumbai</p>
+                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">BVIMIT</h3>
+                <p className="text-muted-foreground text-sm">Navi Mumbai</p>
               </div>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              Bharati Vidyapeeth's Institute of Management & Information Technology - 
+            </Link>
+            <p className="text-muted-foreground leading-relaxed">
+              Bharati Vidyapeeth's Institute of Management & Information Technology -
               Empowering future innovators through quality education since 2002.
             </p>
             <div className="flex space-x-4">
@@ -60,7 +60,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2 bg-gray-800 rounded-lg transition-colors duration-200 ${social.color}`}
+                  className={`p-2 bg-muted/50 rounded-lg hover:bg-muted transition-colors duration-200 ${social.color.replace('text-blue', 'text-primary').replace('text-pink', 'text-primary')}`}
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -103,7 +103,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -112,58 +112,49 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Contact & Map Info */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
+            className="lg:col-span-1 space-y-6"
           >
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <a
-                  href="https://maps.app.goo.gl/sT3KAbP2aTm7UbyWA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open address in Google Maps"
-                  className="mt-1 flex-shrink-0"
-                >
-                  <MapPin className="h-5 w-5 text-gray-400" />
-                </a>
-                <div className="text-gray-300">
+            <h4 className="text-lg font-semibold mb-6">Connect With Us</h4>
+            <div className="space-y-4 text-sm">
+              <div className="flex items-start space-x-3 group">
+                <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                <div className="text-muted-foreground group-hover:text-primary transition-colors">
                   <p>Sector 8, C.B.D. Belapur</p>
                   <p>Navi Mumbai - 400614</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <a
-                  href="tel:+912227578415"
-                  aria-label="Call BVIMIT"
-                  className="flex-shrink-0"
-                >
-                  <Phone className="h-5 w-5 text-gray-400" />
-                </a>
-                <div className="text-gray-300">
-                  <a href="tel:+912227578415" className="hover:underline block">022-27578415</a>
-                  <a href="tel:+918657008016" className="hover:underline block">+91 8657008016</a>
+              <div className="flex items-center space-x-3 group">
+                <Phone className="h-5 w-5 text-primary" />
+                <div className="text-muted-foreground group-hover:text-primary transition-colors">
+                  <a href="tel:+912227578415" className="block hover:underline">022-27578415</a>
+                  <a href="tel:+918657008016" className="block hover:underline">+91 8657008016</a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 group">
+                <Mail className="h-5 w-5 text-primary" />
                 <a
                   href="mailto:principal.bvimit@bharatividyapeeth.edu"
-                  aria-label="Email BVIMIT"
-                  className="flex-shrink-0"
-                >
-                  <Mail className="h-5 w-5 text-gray-400" />
-                </a>
-                <a
-                  href="mailto:principal.bvimit@bharatividyapeeth.edu"
-                  className="text-gray-300 hover:underline"
+                  className="text-muted-foreground hover:text-primary hover:underline transition-colors break-all"
                 >
                   principal.bvimit@bharatividyapeeth.edu
                 </a>
               </div>
+            </div>
+
+            {/* Compact Map Integration */}
+            <div className="mt-6 rounded-xl overflow-hidden h-32 border border-border/50 shadow-sm transition-transform hover:scale-[1.02] duration-300">
+              <iframe
+                src="https://www.google.com/maps?q=BVIMIT%20Sector%208%20C.B.D.%20Belapur%2C%20Navi%20Mumbai%20400614&output=embed"
+                title="BVIMIT Location"
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
             </div>
           </motion.div>
         </div>
@@ -174,19 +165,19 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-400 text-sm">
-            © 2025 Bharati Vidyapeeth's Institute of Management & Information Technology. All rights reserved.
+          <p className="text-muted-foreground text-sm">
+            © 2026 Bharati Vidyapeeth's Institute of Management & Information Technology. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Sitemap
             </a>
           </div>

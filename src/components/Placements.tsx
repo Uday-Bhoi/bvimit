@@ -57,68 +57,88 @@ export default function Placements() {
   ];
 
   return (
-    <section id="placements" className="py-20 bg-white">
+    <section id="placements" className="py-20 bg-background transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Placement Excellence
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our students are placed in top companies with excellent packages, reflecting the quality of education and industry readiness.
-          </p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4"
+            >
+              Career & Placements
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-black text-foreground tracking-tight"
+            >
+              Global Career <span className="text-primary italic">Outcomes</span>
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-muted-foreground font-medium text-lg max-w-md md:text-right"
+          >
+            Securing positions in world-class organizations through rigorous industry training.
+          </motion.p>
+        </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+              className="group bg-card p-8 rounded-3xl border border-border/50 hover:border-primary/50 transition-all duration-300"
             >
-              <div className="inline-flex p-4 bg-primary/10 rounded-xl mb-4">
-                <stat.icon className="h-8 w-8 text-primary" />
+              <div className="mb-6 inline-block p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                <stat.icon className="h-6 w-6" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-              <div className="text-lg font-semibold text-gray-700 mb-1">{stat.label}</div>
-              <div className="text-sm text-gray-500">{stat.description}</div>
+              <div className="text-4xl font-black text-foreground mb-1 tracking-tighter">{stat.number}</div>
+              <p className="text-xs font-black text-primary uppercase tracking-widest mb-3 opacity-60">{stat.label}</p>
+              <p className="text-sm text-muted-foreground font-bold">{stat.description}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Top Companies */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 md:p-12"
+          className="bg-primary/5 border border-primary/20 rounded-[3rem] p-8 md:p-16 relative overflow-hidden"
         >
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Top 10 Recruiting Companies
+          {/* Decorative shapes */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -mr-32 -mt-32" />
+          
+          <h3 className="text-3xl font-extrabold text-foreground text-center mb-16 relative z-10">
+            Top Recruiting <span className="text-primary italic">Partners</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {topCompanies.map((company, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+                whileHover={{ scale: 1.05 }}
+                className="bg-card/80 backdrop-blur rounded-[1.5rem] p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 border border-border/50 group"
               >
-                <div className="text-lg font-bold text-gray-900 mb-2">{company.name}</div>
-                <div className="text-2xl font-bold text-primary">{company.package}</div>
+                <div className="text-base font-bold text-muted-foreground mb-3 group-hover:text-primary transition-colors">{company.name}</div>
+                <div className="text-2xl font-black text-primary tracking-tighter">{company.package}</div>
               </motion.div>
             ))}
           </div>
@@ -126,14 +146,18 @@ export default function Placements() {
 
         {/* Company Logos */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-24 text-center"
         >
-          <h4 className="text-2xl font-bold text-gray-900 mb-8">Our Placement Partners</h4>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
+          <div className="inline-block relative mb-12">
+            <h4 className="text-2xl font-bold text-foreground relative z-10 px-4">Our Placement Network</h4>
+            <div className="absolute bottom-0 left-0 w-full h-3 bg-primary/10 -rotate-1 rounded-full z-0" />
+          </div>
+          
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
             {companyLogos.map((logo, index) => (
               <motion.div
                 key={index}
@@ -141,12 +165,13 @@ export default function Placements() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-all duration-300"
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                className="flex items-center justify-center p-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer"
               >
                 <img
                   src={logo}
-                  alt={`Company logo ${index + 1}`}
-                  className="max-h-16 w-auto object-contain"
+                  alt={`Partner ${index + 1}`}
+                  className="max-h-12 w-auto object-contain dark:invert dark:brightness-200"
                 />
               </motion.div>
             ))}

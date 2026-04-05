@@ -1,227 +1,81 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function InstitutionalHeader() {
   return (
     <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-        body {
-          font-family: 'Inter', sans-serif;
-          margin: 0;
-          background: #fff;
-        }
-
-        header {
-          display: grid;
-          grid-template-columns: 1fr 3fr 1fr;
-          align-items: center;
-          background: url('https://media.istockphoto.com/id/1241335697/vector/old-very-light-beige-coloured-smudged-wall-textured-vector-backgrounds.jpg?s=612x612&w=0&k=20&c=ti6j4Fdf2S63Vaxzk9bGvH_HKlKKPhQZx_13XCDx0Cw=');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          color: white;
-          padding: 10px 5px;
-        }
-
-        .logo,
-        .jubilee {
-          align-self: stretch;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .logo img,
-        .jubilee img {
-          height: 120px;
-          width: 120px;
-          object-fit: contain;
-        }
-
-        .center-info h1,
-        .center-info h2,
-        .location span,
-        .dte,
-        .badge-box span {
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-        }
-
-        .center-info {
-          text-align: center;
-          color: #fff;
-        }
-
-        .center-info h1 {
-          margin: 0;
-          font-size: 26px;
-          font-weight: 600;
-          color: #333;
-          letter-spacing: 1px;
-        }
-
-        .center-info h2 {
-          margin: 5px 0;
-          font-size: 28px;
-          font-weight: 700;
-          color: #333;
-          line-height: 1.2;
-        }
-
-        .location {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          color: #333;
-          font-size: 18px;
-          margin-top: 6px;
-        }
-
-        .location img {
-          height: 18px;
-          width: 18px;
-          filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
-        }
-
-        .badges {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-          margin-top: 10px;
-        }
-
-        .badge-box {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 10px;
-          background: rgba(255, 255, 255, 0.9);
-          border-radius: 8px;
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-          transition: transform 0.2s;
-        }
-
-        .badge-box:hover {
-          transform: scale(1.05);
-        }
-
-        .badge-box img {
-          height: 18px;
-          width: 18px;
-        }
-
-        .badge-box span {
-          font-size: 12px;
-          color: #333;
-          font-weight: 500;
-        }
-
-        .dte {
-          text-align: center;
-          font-size: 18px;
-          color: #333;
-          font-weight: 500;
-          margin-top: 10px;
-        }
-
-        .dte span {
-          color: #333;
-          font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-          header {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto auto auto;
-            text-align: center;
-          }
-
-          .logo img,
-          .jubilee img {
-            height: 120px;
-            width: 120px;
-          }
-
-          .center-info h1 {
-            font-size: 26px;
-          }
-
-          .center-info h2 {
-            font-size: 32px;
-          }
-
-          .location,
-          .dte {
-            font-size: 14px;
-          }
-
-          .badge-box span {
-            font-size: 14px;
-          }
-        }
-      `}</style>
-
-      <header>
-        {/* Left: BVIMIT Logo */}
-        <div className="logo">
-          <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/f6eeb27c-af0b-41c3-b2f9-f31da24cc3c8"
-            alt="BVIMIT Logo"
-          />
-        </div>
-
-        {/* Center: Institution Info */}
-        <div className="center-info">
-          <h1>Bharati Vidyapeeth's</h1>
-          <h2>Institute of Management & Information Technology</h2>
-
-          <div className="location">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/535/535239.png"
-              alt="Location icon"
-            />
-            <span>Navi Mumbai, Mumbai</span>
+      {/* Top Utility Bar - VJTI Inspired */}
+      <div className="w-full bg-[#111827] text-white py-1.5 px-4 sm:px-6 lg:px-8 border-b border-white/5 transition-colors duration-300">
+        <div className="max-w-[1400px] mx-auto flex justify-between items-center text-[10px] md:text-[11px] font-black uppercase tracking-[0.15em]">
+          <div className="flex gap-6">
+            {['Students', 'Alumni', 'Faculty', 'Media'].map((item) => (
+              <Link key={item} href={`#${item.toLowerCase()}`} className="hover:text-primary transition-all duration-300">{item}</Link>
+            ))}
           </div>
-
-          <div className="badges">
-            <div className="badge-box">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
-                alt="Award"
-              />
-              <span>AICTE Approved</span>
-            </div>
-
-            <div className="badge-box">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"
-                alt="Building"
-              />
-              <span>University of Mumbai Affiliated</span>
-            </div>
-
-            <div className="badge-box">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
-                alt="Award"
-              />
-              <span>NBA Accredited till June 2023</span>
-            </div>
-          </div>
-
-          <div className="dte">
-            DTE Code: <span>MC 3162</span>
+          <div className="flex gap-6 items-center">
+            <Link href="#portal" className="text-primary hover:text-white transition-all">My Portal</Link>
+            <div className="w-px h-3 bg-white/20" />
+            <Link href="#career" className="hover:text-primary transition-all">Careers</Link>
           </div>
         </div>
+      </div>
 
-        {/* Right: Jubilee Badge */}
-        <div className="jubilee">
-          <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/03f7eaa4-cf08-4a47-8861-18f37039e935"
-            alt="50 Years Badge"
-          />
+      <header className="w-full bg-background py-4 px-4 sm:px-6 lg:px-8 border-b-2 border-border/50 transition-colors duration-300 relative z-50">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-6">
+
+          {/* Main Branding Section */}
+          <Link href="/" className="flex items-center gap-6 group cursor-pointer transition-opacity hover:opacity-90 active:scale-[0.98]">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="relative pr-6 border-r border-border/50"
+            >
+              <img
+                src="/assets/images/bharati_logo.png"
+                alt="BVIMIT Logo"
+                className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:rotate-[5deg]"
+              />
+            </motion.div>
+ 
+            <div className="flex flex-col">
+              <h1 className="text-foreground font-black text-2xl md:text-3xl tracking-tighter uppercase leading-none transition-colors duration-300 mb-1 group-hover:text-primary">
+                Bharati Vidyapeeth
+              </h1>
+              <p className="text-muted-foreground text-xs md:text-sm font-black tracking-widest uppercase opacity-70">
+                Institute of Management & Information Technology
+              </p>
+            </div>
+          </Link>
+
+          {/* Recognition & Accreditation Badges */}
+          <div className="flex items-center gap-10">
+            <div className="flex items-center gap-4 py-2 px-6 border border-border/30 rounded-2xl bg-muted/20">
+              <div className="flex flex-col items-center">
+                <span className="text-[9px] font-black uppercase text-muted-foreground tracking-tighter leading-none mb-1">NAAC</span>
+                <div className="text-xl font-black text-primary leading-none">A+</div>
+                <span className="text-[8px] font-black uppercase text-primary leading-none mt-0.5">Accredited</span>
+              </div>
+              <div className="w-px h-10 bg-border/50" />
+              <img
+                src="/assets/images/logo_50years.png"
+                alt="Jubilee Logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden xl:block bg-primary text-white font-black text-xs uppercase tracking-widest px-8 py-3 rounded-full shadow-lg shadow-primary/20"
+            >
+              Virtual Tour
+            </motion.button>
+          </div>
+
         </div>
       </header>
     </>

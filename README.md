@@ -19,7 +19,17 @@ Use pnpm for the package manager.
 
 ## Setup
 
-This project is set up already and running on a cloud environment, as well as a convex development in the sandbox.
+1. **Install Dependencies**: Use `pnpm` exclusively to ensure the lockfile is respected.
+   ```bash
+   pnpm install
+   ```
+2. **Environment Variables**: Copy `.env.example` to `.env` and fill in your Convex and Supabase credentials.
+3. **Run Development Server**:
+   ```bash
+   pnpm run dev
+   ```
+
+Note: `npm install` may fail due to peer dependency conflicts or missing local links. Always use `pnpm`.
 
 ## Environment Variables
 
@@ -213,33 +223,6 @@ The schema is defined in `src/convex/schema.ts`.
 
 Do not include the `_id` and `_creationTime` fields in your queries (it is included by default for each table).
 Do not index `_creationTime` as it is indexed for you. Never have duplicate indexes.
-
-
-## Convex Actions: Using CRUD operations
-
-When running anything that involves external connections, you must use a convex action with "use node" at the top of the file.
-
-You cannot have queries or mutations in the same file as a "use node" action file. Thus, you must use pre-built queries and mutations in other files.
-
-You can also use the pre-installed internal crud functions for the database:
-
-```ts
-// in convex/users.ts
-import { crud } from "convex-helpers/server/crud";
-import schema from "./schema.ts";
-
-export const { create, read, update, destroy } = crud(schema, "users");
-
-// in some file, in an action:
-const user = await ctx.runQuery(internal.users.read, { id: userId });
-
-await ctx.runMutation(internal.users.update, {
-  id: userId,
-  patch: {
-    status: "inactive",
-  },
-});
-```
 
 
 ## Common Convex Mistakes To Avoid

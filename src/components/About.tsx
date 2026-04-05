@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-background text-foreground transition-colors duration-300 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -12,101 +12,100 @@ export default function About() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ type: "spring", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="inline-block mb-4"
-          >
-            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-              About Us
-            </span>
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            BVIMIT
-          </h2>
-          <p className="text-base text-gray-600 max-w-6xl mx-auto leading-relaxed text-justify">
-            Bharati Vidyapeeth is an institution planted in the year 1964 by our founder Dr. Patangrao Kadam. 
-            During the last 55 years, Bharati Vidyapeeth has made astonishing strides in the field of education, 
-            particularly, higher and professional education. Today Bharati Vidyapeeth conducts more than 156 educational 
-            units of various kinds, right from pre-primary schools to postgraduate institutions and a full fledged 
-            professional university (BVDU). At Bharati Vidyapeeth, our objective has been to contribute to intellectual 
-            awaking and social transformation in different spheres such as education, economic, social & cultural fields 
-            in India and more particularly in Maharashtra. Information Technology has invaded our society in a very 
-            significant manner. Hence to keep pace with the modern times, the year 2002 marked the establishment of 
-            Bharati Vidyapeeth's Institute of Management & Information Technology. At BVIMIT MCA course, we impart 
-            I.T. Management education to meet the demand of the I.T. Industry.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 items-stretch">
-          {/* Founder's Message */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-6 flex flex-col"
-          >
+        <div className="flex flex-col md:flex-row items-baseline justify-between mb-16 gap-8">
+          <div className="max-w-2xl">
             <motion.div
-              whileHover={{ scale: 1.02, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-lg border border-blue-100 backdrop-blur-sm flex-1 flex flex-col"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4"
             >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Patangrao Kadam</h3>
-                <p className="text-sm text-primary font-semibold">Founder, Bharati Vidyapeeth Deemed University</p>
-              </div>
-              <div className="space-y-4 text-gray-700 leading-relaxed flex-1">
-                <p>
-                  I am indeed happy to welcome you to MCA Bharati Vidyapeeth's Institute of Management & Information 
-                  Technology, Navi Mumbai, which has a large pool of new executive talent waiting to step into the 
-                  Corporate World.
-                </p>
-                <p>
-                  I established Bharati Vidyapeeth in 1964 with a realization that all-round social transformation 
-                  can be brought about through the spread of education. During the last 55 years, we have established 
-                  more than 156 educational units of various kinds, right from Pre-Primary School to a full-fledged 
-                  University.
-                </p>
-              </div>
-              <div className="mt-6">
-                <Button variant="outline" className="w-full">
-                  Read more...
-                </Button>
-              </div>
+              Institutional Profile
             </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-black text-foreground tracking-tight"
+            >
+              Defining the <span className="text-primary italic">Standard</span> of IT Excellence
+            </motion.h2>
+          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-muted-foreground font-medium text-lg max-w-md md:text-right"
+          >
+            Since 2002, BVIMIT has served as a cornerstone of management and technical education in Navi Mumbai.
           </motion.div>
+        </div>
 
-          {/* Founder's Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          {/* Visual Legacy */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8 flex flex-col"
+            className="lg:col-span-5 relative"
           >
-            <motion.div 
-              className="relative group w-fit h-fit mx-auto"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="absolute inset-0 bg-primary/5 rounded-[2.5rem] transform translate-x-4 translate-y-4 -z-10" />
+            <div className="relative rounded-[2rem] overflow-hidden border border-border shadow-2xl bg-card">
               <img
                 src="https://harmless-tapir-303.convex.cloud/api/storage/9a35e636-a4eb-419e-ba2b-edb716eef88b"
-                alt="Dr. Patangrao Kadam - Founder, Bharati Vidyapeeth"
-                className="relative rounded-2xl shadow-lg"
+                alt="Dr. Patangrao Kadam"
+                className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
-            </motion.div>
+              <div className="p-8 bg-card border-t border-border">
+                <p className="text-xs font-black uppercase text-primary tracking-widest mb-1">Visionary Founder</p>
+                <h4 className="text-2xl font-black text-foreground">Dr. Patangrao Kadam</h4>
+                <p className="text-sm text-muted-foreground font-bold italic mt-1">Founder, Bharati Vidyapeeth</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Narrative Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="lg:col-span-7 space-y-10"
+          >
+            <div className="inline-block relative">
+              <h3 className="text-3xl font-black text-foreground relative z-10 px-2 tracking-tight">Founder's Message</h3>
+              <div className="absolute bottom-0 left-0 w-full h-2 bg-primary/10 -rotate-1 rounded-full z-0" />
+            </div>
+            
+            <div className="space-y-8">
+              <p className="text-xl font-bold text-foreground leading-[1.6] italic border-l-4 border-primary pl-8 py-2">
+                "I am indeed happy to welcome you to Bharati Vidyapeeth's Institute of Management & Information 
+                Technology, Navi Mumbai, where innovation meets tradition."
+              </p>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-medium">
+                <p>
+                  Established in 1964, Bharati Vidyapeeth has been a beacon of social transformation through quality 
+                  education. Our Belapur campus, founded in 2002, continues this mission by fostering an 
+                  environment that balances academic rigor with corporate relevance.
+                </p>
+                <p>
+                  With a legacy spanning five decades and a network of 156 institutions, we are committed to 
+                  empowering students to become leaders in the digital era.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-6">
+              <Button size="lg" className="rounded-xl px-10 h-14 font-black uppercase tracking-widest text-xs shadow-xl shadow-primary/20">
+                Institutional History
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-xl px-10 h-14 font-black uppercase tracking-widest text-xs">
+                Accreditations
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>

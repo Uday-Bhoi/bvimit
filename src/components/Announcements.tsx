@@ -54,65 +54,75 @@ export default function Announcements() {
   };
 
   return (
-    <section id="admissions" className="py-20 bg-gray-50">
+    <section id="announcements" className="py-24 bg-background transition-colors duration-300 border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest Announcements
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest news, admissions, and events at BVIMIT.
-          </p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-xl">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4"
+            >
+              Institutional Pulse
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-black text-foreground tracking-tight"
+            >
+              Latest <span className="text-primary italic">Updates</span>
+            </motion.h2>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex gap-4"
+          >
+            <Button variant="outline" className="rounded-full font-bold">Archives</Button>
+            <Button className="rounded-full font-bold shadow-lg shadow-primary/20">Newsletter</Button>
+          </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {announcements.map((announcement, index) => (
             <motion.a
               key={index}
               href={announcement.link}
               target={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "_blank" : undefined}
               rel={announcement.link.startsWith('http') || announcement.link.endsWith('.pdf') ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 group cursor-pointer block"
+              className="group bg-card hover:bg-muted/50 p-6 rounded-2xl border border-border/50 hover:border-primary/50 transition-all duration-300 block relative"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className={`p-2 rounded-lg ${announcement.urgent ? 'bg-red-100' : 'bg-blue-100'}`}>
-                    <Bell className={`h-5 w-5 ${announcement.urgent ? 'text-red-600' : 'text-blue-600'}`} />
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(announcement.type)}`}>
-                    {announcement.type}
-                  </span>
-                </div>
+              <div className="flex items-center justify-between mb-4">
+                <span className={`px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest ${getTypeColor(announcement.type)} bg-opacity-20`}>
+                  {announcement.type}
+                </span>
                 {announcement.urgent && (
-                  <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">
-                    NEW
-                  </span>
+                  <div className="flex items-center gap-1">
+                    <div className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+                    <span className="text-[10px] font-black text-red-500 uppercase tracking-tighter">New</span>
+                  </div>
                 )}
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-bold text-foreground mb-6 line-clamp-2 leading-tight group-hover:text-primary transition-colors">
                 {announcement.title}
               </h3>
 
-              <div className="flex items-center justify-between">
-                <div className="flex items-center text-gray-500 text-sm">
-                  <Calendar className="h-4 w-4 mr-2" />
+              <div className="flex items-center justify-between pt-4 border-t border-border/30">
+                <div className="flex items-center text-muted-foreground text-xs font-bold">
+                  <Calendar className="h-3.5 w-3.5 mr-1.5 text-primary" />
                   {announcement.date}
                 </div>
-                <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 pointer-events-none">
-                  View Details
-                  <ExternalLink className="h-4 w-4 ml-2" />
-                </Button>
+                <ExternalLink className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1" />
               </div>
             </motion.a>
           ))}
