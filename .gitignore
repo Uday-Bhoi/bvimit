@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+ 
+# Next.js
+.next/
+out/
+ 
+# Environment
+.env*
+ 
+# Build artifacts
+build/
+.turbo/
+ 
+# OS files
+.DS_Store
+Thumbs.db
+.pnpm-debug.log*
