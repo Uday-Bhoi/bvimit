@@ -36,14 +36,14 @@ export default function LoadingScreen() {
       setPercent((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setIsVisible(false), 500); // Wait bit before fading out
+          setTimeout(() => setIsVisible(false), 300); // Faster fade out
           return 100;
         }
-        // Quadratic-like progression: fast then slow
-        const increment = Math.max(1, (100 - prev) / 10);
+        // Much faster progression
+        const increment = Math.max(2, (100 - prev) / 5);
         return Math.min(100, prev + increment);
       });
-    }, 100);
+    }, 40);
 
     return () => clearInterval(interval);
   }, [isVisible]);

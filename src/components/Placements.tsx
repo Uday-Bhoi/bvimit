@@ -165,13 +165,13 @@ export default function Placements() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
-                className="flex items-center justify-center p-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                whileHover={{ scale: 1.15, y: -5 }}
+                className="flex items-center justify-center p-4 bg-white/50 dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 cursor-pointer border border-transparent hover:border-primary/20"
               >
                 <img
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  className="max-h-12 w-auto object-contain dark:invert dark:brightness-200"
+                  className="max-h-10 md:max-h-12 w-auto object-contain"
                 />
               </motion.div>
             ))}

@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    images: {
+        formats: ['image/avif', 'image/webp'],
+        remotePatterns: [
+            { protocol: 'https', hostname: 'images.unsplash.com' },
+            { protocol: 'https', hostname: 'bvimit.co.in' },
+            { protocol: 'https', hostname: 'tour.panoee.net' }
+        ]
+    }
 };
 
 export default nextConfig;

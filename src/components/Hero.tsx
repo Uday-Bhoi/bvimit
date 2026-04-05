@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -18,9 +19,11 @@ export default function Hero() {
 
       {/* Background Image - Absolute Direct Clarity */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/assets/images/campusbanner.jpg"
           alt="BVIMIT Campus"
+          fill
+          priority
           className="w-full h-full object-cover transition-all duration-700"
         />
         {/* Dynamic contrast overlays - only where needed for text/stats legibility */}
@@ -35,12 +38,12 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       >
-        <h2 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[1.05] tracking-tight transition-colors duration-300 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
+        <h2 className="text-4xl sm:text-5xl md:text-8xl font-black text-white mb-8 leading-[1.05] tracking-tight transition-colors duration-300 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
           Excellence in <br />
           <span className="text-primary italic animate-subtle-glow">IT Education.</span>
         </h2>
 
-        <p className="text-xl md:text-3xl text-white max-w-4xl mx-auto mb-12 font-bold leading-relaxed transition-colors duration-300 drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
+        <p className="text-lg sm:text-xl md:text-3xl text-white max-w-4xl mx-auto mb-12 font-bold leading-relaxed transition-colors duration-300 drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
           Bharati Vidyapeeth’s Institute of Management & Information Technology
         </p>
 

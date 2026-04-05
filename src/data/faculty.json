@@ -1,0 +1,90 @@
+[
+  {
+    "id": "suhasini-vijaykumar",
+    "name": "Dr. Suhasini Vijaykumar",
+    "designation": "Principal and Professor",
+    "qualification": "MCA, PHD(COMPUTER SCIENCE)",
+    "experience": "25 years",
+    "expertise": "DATA MINING, ADVANCED DATABASE SYSTEMS, ARTIFICIAL INTELLIGENCE, MACHINE LEARNING, DEEP LEARNING, INFORMATION SECURITY, COMPUTER NETWORKS, WIRELESS COMMUNICATIONS.",
+    "email": "principal.bvimit@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Suhasini_Vijaykumar.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/Suhasini_Vijaykumar_One_Page_Format.pdf"
+  },
+  {
+    "id": "jyoti-kharade",
+    "name": "Dr. Jyoti Kharade",
+    "designation": "Vice-Principal / Associate Professor",
+    "qualification": "MCA, MPhil, Ph.D",
+    "experience": "21 years",
+    "expertise": "Introduction to Web Technology, Object Oriented Programming, Core and Advance Java, Software Engineering.",
+    "email": "jyoti.kharade@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Jyoti_Kharade.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/jyoti_up.pdf"
+  },
+  {
+    "id": "priya-chandran",
+    "name": "Dr. Priya Chandran",
+    "designation": "Associate Professor",
+    "qualification": "PhD in Computer Science, MCA, M Phil",
+    "experience": "20 years",
+    "expertise": "Advanced Database Management System, Data Mining, Artificial Intelligence, Machine Learning, Big Data Analytics and Visualization, Deep Learning.",
+    "email": "priya.chandran@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Priya_Chandran.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/priys_up.pdf"
+  },
+  {
+    "id": "shravani-pawar",
+    "name": "Ms. Shravani Pawar",
+    "designation": "Assistant Professor",
+    "qualification": "MCA",
+    "experience": "15 years",
+    "expertise": "Programming in C, Python, Web Technologies, Mobile Application Development.",
+    "email": "shravani.pawar@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Shravani_Pawar.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/shravani_up.pdf"
+  },
+  {
+    "id": "pratibha-deshmukh",
+    "name": "Dr. Pratibha Mahindra Deshmukh",
+    "designation": "Associate Professor",
+    "qualification": "PhD, MCA",
+    "experience": "18 years",
+    "expertise": "Networking, Operating Systems, Cloud Computing, IoT.",
+    "email": "pratibha.deshmukh@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Pratiba_Deshmukh.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/pratibha_up.pdf"
+  },
+  {
+    "id": "shubhangi-mahadik",
+    "name": "Ms. Shubhangi Mahadik",
+    "designation": "Assistant Professor",
+    "qualification": "MCA",
+    "experience": "12 years",
+    "expertise": "Software Project Management, MIS, Database Management.",
+    "email": "shubhangi.mahadik@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Shubhangi_mahadik.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/shubhangi_up.pdf"
+  },
+  {
+    "id": "sudeshna-roy",
+    "name": "Mrs. Sudeshna Roy",
+    "designation": "Assistant Professor",
+    "qualification": "M.Sc (CS), M.Phil",
+    "experience": "14 years",
+    "expertise": "Mathematics for Computer Science, Algorithms, Discrete Structure.",
+    "email": "sudeshna.roy@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Sudheshna_Roy.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/sudeshna_up.pdf"
+  },
+  {
+    "id": "nidhi-poonia",
+    "name": "Ms. Nidhi Poonia",
+    "designation": "Assistant Professor",
+    "qualification": "MCA",
+    "experience": "10 years",
+    "expertise": "Object Oriented Concepts, C++, Java Programming.",
+    "email": "nidhi.poonia@bharatividyapeeth.edu",
+    "image": "https://bvimit.co.in/bvimit/facultyimage/Nidhi_Poonia.jpg",
+    "resume": "https://bvimit.co.in/bvimit/facultyresume/nidhi_up.pdf"
+  }
+]

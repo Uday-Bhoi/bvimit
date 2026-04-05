@@ -6,10 +6,10 @@ export default function Footer() {
   const quickLinks = [
     { name: "About Us", href: "#about" },
     { name: "Departments", href: "#departments" },
-    { name: "Admissions", href: "#admissions" },
+    { name: "Admissions", href: "/courses/mca" },
     { name: "Placements", href: "#placements" },
-    { name: "Faculty", href: "#" },
-    { name: "Alumni", href: "#" }
+    { name: "Virtual Tour", href: "/virtual-tour" },
+    { name: "Faculty Directory", href: "/faculty" }
   ];
 
   const importantLinks = [
@@ -79,12 +79,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -171,15 +171,15 @@ export default function Footer() {
             © 2026 Bharati Vidyapeeth's Institute of Management & Information Technology. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link href="/privacy" className="text-muted-foreground hover:text-primary text-sm transition-colors cursor-pointer">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            </Link>
+            <Link href="/terms" className="text-muted-foreground hover:text-primary text-sm transition-colors cursor-pointer">
               Terms of Service
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            </Link>
+            <Link href="/sitemap" className="text-muted-foreground hover:text-primary text-sm transition-colors cursor-pointer">
               Sitemap
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
