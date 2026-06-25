@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { FileText, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { documentAssetPaths } from "@/data/publicAssetMap";
 
 export default function Syllabus() {
-  const pdfUrl =
-    "https://bvimit.co.in/bvimit/pdf/MCAsyllabus%20AC20-21UOM.pdf";
+  const pdfUrl = documentAssetPaths.mcaSyllabusAc20_21Uom;
 
   return (
     <section id="syllabus" className="py-20 bg-gray-50">

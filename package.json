@@ -9,6 +9,7 @@
     "start": "next start",
     "dev:vite": "vite",
     "build:vite": "tsc -b && vite build",
+    "generate:legacy-content": "php scripts/generate-legacy-content.php",
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview:vite": "vite preview"

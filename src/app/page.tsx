@@ -1,7 +1,12 @@
 "use client";
 
+import SiteShell from "@/components/layout/SiteShell";
 import Landing from "@/views/Landing";
 
 export default function HomePage() {
-    return <Landing />;
+  return (
+    <SiteShell>
+      <Landing />
+    </SiteShell>
+  );
 }
