@@ -114,9 +114,9 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-foreground/70 hover:text-primary font-bold text-xs uppercase tracking-widest px-3 py-2 rounded-md transition-all duration-200"
+                  className="text-foreground/70 hover:text-primary font-bold text-xs uppercase tracking-widest px-3 py-2 rounded-md transition-all duration-200 flex items-center justify-center"
                 >
-                  {item.label}
+                  {item.icon ? <item.icon className="w-5 h-5" /> : item.label}
                 </Link>
               );
             })}
@@ -266,9 +266,10 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="block px-3 py-3 text-base text-foreground font-medium rounded-md hover:bg-muted transition-colors duration-200"
+                    className="flex items-center gap-2 px-3 py-3 text-base text-foreground font-medium rounded-md hover:bg-muted transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
+                    {item.icon && <item.icon className="w-5 h-5" />}
                     {item.label}
                   </Link>
                 );

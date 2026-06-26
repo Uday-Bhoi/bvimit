@@ -27,6 +27,8 @@ import {
   TrendingUp,
   User,
   Users,
+  Book,
+  Image,
 } from "lucide-react";
 
 export interface SiteLink {
@@ -44,6 +46,7 @@ export interface PrimaryNavigationChildLink extends SiteLink {
 }
 
 export interface PrimaryNavigationItem extends SiteLink {
+  icon?: LucideIcon;
   children?: readonly PrimaryNavigationChildLink[];
   menuVariant?: "standard" | "mega";
 }
@@ -140,210 +143,127 @@ export const primaryNavigationItems = [
   {
     label: "Home",
     href: "/",
+    icon: Home,
+  },
+  {
+    label: "Placements",
+    href: "/placements",
     children: [
-      {
-        label: "Overview",
-        href: "/",
-        icon: Home,
-        description: "Return to main homepage",
-      },
-      {
-        label: "Campus Tour",
-        href: "/virtual-tour",
-        icon: Globe,
-        description: "Virtual interactive walkthrough",
-      },
+      { label: "Placements", href: "/placements", icon: TrendingUp },
+      { label: "Entrepreneurship Cell", href: "/industry/entrepreneurship-cell", icon: Building },
+      { label: "Industry Interaction", href: "/industry/interaction", icon: Handshake },
     ],
   },
   {
-    label: "About",
-    href: "/about",
-    menuVariant: "mega",
-    children: [
-      { label: "About Us", href: "/about", icon: Info },
-      { label: "Vision & Mission", href: "/about/vision", icon: Target },
-      { label: "Institutional Values", href: "/about/values", icon: Award },
-      { label: "Founder's Message", href: "/about/founder", icon: User },
-      { label: "Principal's Message", href: "/about/principal", icon: Users },
-      { label: "Deans", href: "/about/deans", icon: Award },
-      { label: "Organogram", href: "/about/organogram", icon: Building },
-      { label: "Committees", href: "/about/committees", icon: Users },
-      { label: "Code of Conduct", href: "/about/conduct", icon: ShieldCheck },
-      {
-        label: "Institutional Ethics",
-        href: "/about/ethics",
-        icon: ShieldCheck,
-      },
-      { label: "Employment", href: "/about/employment", icon: Briefcase },
-      { label: "Campus", href: "/about/campus", icon: Map },
-      {
-        label: "IT Infrastructure",
-        href: "/about/infrastructure",
-        icon: Server,
-      },
-      { label: "Annual Report", href: "/about/report", icon: FileText },
-    ],
-  },
-  {
-    label: "Programmes",
+    label: "Courses",
     href: "/courses/mca",
     children: [
-      {
-        label: "MCA",
-        href: "/courses/mca",
-        icon: MonitorSmartphone,
-        description: "Master of Computer Applications",
-      },
-      {
-        label: "PhD",
-        href: "/courses/phd",
-        icon: GraduationCap,
-        description: "Doctor of Philosophy in IT",
-      },
-      {
-        label: "Certification",
-        href: "/#courses",
-        icon: Award,
-        description: "Short-term value-add courses",
-      },
-    ],
-  },
-  {
-    label: "Admissions",
-    href: "/courses/mca",
-    children: [
-      {
-        label: "Apply Now",
-        href: "/courses/mca",
-        icon: FileText,
-        description: "Start your application process",
-      },
-      {
-        label: "Fee Structure",
-        href: "/courses/mca",
-        icon: Newspaper,
-        description: "Detailed academic costs",
-      },
-      {
-        label: "Scholarships",
-        href: "/#announcements",
-        icon: Briefcase,
-        description: "Financial aid opportunities",
-      },
+      { label: "MCA", href: "/courses/mca", icon: MonitorSmartphone },
+      { label: "MCA FEE details", href: "/admissions/fees", icon: FileText },
+      { label: "Phd", href: "/courses/phd", icon: GraduationCap },
     ],
   },
   {
     label: "Research",
     href: "/research",
     children: [
-      {
-        label: "Publications",
-        href: "/#events",
-        icon: Library,
-        description: "Latest papers and journals",
-      },
-      {
-        label: "Laboratories",
-        href: "/#about",
-        icon: FlaskConical,
-        description: "Advanced research infrastructure",
-      },
-      {
-        label: "Consultancy",
-        href: "/#placements",
-        icon: Handshake,
-        description: "Industry collaboration projects",
-      },
+      { label: "Research Obj", href: "/research/objectives", icon: Target },
+      { label: "Code of ethics", href: "/research/code-of-ethics", icon: ShieldCheck },
+      { label: "Publications", href: "/research/publications", icon: Library },
+      { label: "Research and consultancy grants", href: "/research/consultancy", icon: FlaskConical },
+      { label: "Research awards", href: "/about/achievements-awards", icon: Award },
+      { label: "MoU", href: "/research/mou", icon: Handshake },
+      { label: "International conference 2026", href: "/research/icet-2026", icon: Globe },
+      { label: "International conference 2024", href: "/research/icet-2024", icon: Globe },
+      { label: "International conference 2022", href: "/research/icet-2022", icon: Globe },
     ],
   },
   {
-    label: "Placements",
-    href: "/placements",
+    label: "Campus",
+    href: "/campus/infrastructure",
     children: [
-      {
-        label: "Overview",
-        href: "/placements",
-        icon: TrendingUp,
-        description: "Corporate relations statistics",
-      },
-      {
-        label: "Recruiters",
-        href: "/placements",
-        icon: Building,
-        description: "Our hiring partners",
-      },
-      {
-        label: "Internships",
-        href: "/placements",
-        icon: Briefcase,
-        description: "Student industry training",
-      },
+      { label: "Academic Infra", href: "/campus/infrastructure", icon: Server },
+      { label: "Library", href: "/campus/library", icon: Library },
+      { label: "Canteen", href: "/campus/canteen", icon: Home },
+      { label: "Hostel", href: "/campus/hostel", icon: Home },
     ],
   },
   {
-    label: "Students",
-    href: "/students",
+    label: "Transparency",
+    href: "/compliance/transparency",
     children: [
-      {
-        label: "Resources",
-        href: "/students/resources",
-        icon: FileText,
-        description: "Study materials and handbooks",
-      },
-      {
-        label: "Committees",
-        href: "/about/committees",
-        icon: Users,
-        description: "Student councils and cells",
-      },
-    ],
-  },
-  {
-    label: "Events",
-    href: "/events",
-    children: [
-      {
-        label: "Seminars",
-        href: "/events/seminars",
-        icon: Target,
-        description: "Academic and industry seminars",
-      },
-      {
-        label: "Conferences",
-        href: "/events/conferences",
-        icon: Globe,
-        description: "ICET, NCIT & Manthan",
-      },
+      { label: "Academic", href: "/compliance/academic", icon: FileText },
+      { label: "Exam", href: "/compliance/examination", icon: FileText },
+      { label: "Administration", href: "/about/administration", icon: Users },
     ],
   },
   {
     label: "Faculty",
     href: "/faculty",
-    description: "Meet our distinguished professors",
+    children: [
+      { label: "Faculty list", href: "/faculty", icon: Users },
+      { label: "Profile", href: "/faculty", icon: User },
+    ],
   },
   {
-    label: "Alumni",
-    href: "/alumni",
+    label: "Student Corner",
+    href: "/students",
     children: [
-      {
-        label: "Network",
-        href: "/alumni",
-        icon: Users,
-        description: "Connect with graduates",
-      },
-      {
-        label: "Success Stories",
-        href: "/alumni",
-        icon: Star,
-        description: "Notable alumni achievements",
-      },
-      {
-        label: "Events",
-        href: "/alumni",
-        icon: LayoutGrid,
-        description: "Reunions and meetups",
-      },
+      { label: "ISTE Student Chapter", href: "/students/iste", icon: Users },
+      { label: "NPTEL Local Chapter", href: "/students/nptel", icon: Users },
+      { label: "Achievements", href: "/students/achievements", icon: Award },
+      { label: "Technical Magazine", href: "/students/technical-magazine", icon: FileText },
+      { label: "Newsletter Prabhat", href: "/students/newsletter", icon: Newspaper },
+      { label: "IMIT Dairies", href: "/students/imit-dairies", icon: Book },
+      { label: "Glimpses of BVIMIT", href: "/students/glimpses", icon: Image },
+      { label: "Student Handbook", href: "/students/handbook", icon: Book },
     ],
+  },
+  {
+    label: "NIRF",
+    href: "/nirf",
+    children: [
+      { label: "NIRF 2025", href: "/nirf/2025", icon: Award },
+      { label: "NIRF 2024", href: "/nirf/2024", icon: Award },
+      { label: "NIRF 2023", href: "/nirf/2023", icon: Award },
+    ],
+  },
+  {
+    label: "Events",
+    href: "/events",
+    menuVariant: "mega",
+    children: [
+      { label: "Seminars", href: "/events/seminars", icon: Users },
+      { label: "Workshops", href: "/events/workshops", icon: Briefcase },
+      { label: "FDPs", href: "/events/fdp", icon: Book },
+      { label: "Internal Hackathon SIH 2025 Report", href: "/events/sih-2025", icon: Target },
+      { label: "ICET 2026 Report", href: "/events/icet-2026-report", icon: Globe },
+      { label: "ICET 2024 Report", href: "/events/icet-2024-report", icon: Globe },
+      { label: "ICET-2022 Conference Proceedings", href: "/events/icet-2022-proceedings", icon: Globe },
+      { label: "ICET 2022 Report", href: "/events/icet-2022-report", icon: Globe },
+      { label: "National Conference 2020", href: "/events/nc-2020", icon: Globe },
+      { label: "National Conference 2017", href: "/research/ncit-2017", icon: Globe },
+      { label: "Activities", href: "/events/activities", icon: Star },
+      { label: "Sports", href: "/events/sports", icon: Target },
+      { label: "Eminence", href: "/events/eminence", icon: Award },
+      { label: "Manthan", href: "/events/manthan-2026", icon: Star },
+    ],
+  },
+  {
+    label: "ISR",
+    href: "/outreach/isr",
+    children: [
+      { label: "ISR", href: "/outreach/isr", icon: Users },
+      { label: "Swachh Bharat Abhiyan", href: "/outreach/swatch", icon: Star },
+      { label: "Covid 19 Awareness", href: "/outreach/covid-19", icon: Info },
+      { label: "Blood Donation", href: "/outreach/blood-donation", icon: Star },
+      { label: "Tree Plantation", href: "/outreach/tree-plantation", icon: Star },
+      { label: "Khusiyo Ki Pathshala", href: "/outreach/khushiyo-ki-pathshala", icon: Star },
+    ],
+  },
+  {
+    label: "Contact Us",
+    href: "/contact",
   },
 ] satisfies readonly PrimaryNavigationItem[];
 
