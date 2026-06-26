@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Bell, Calendar, ExternalLink } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { documentAssetPaths } from "@/data/publicAssetMap";
 
 export default function Announcements() {
   const announcements = [
@@ -9,21 +10,21 @@ export default function Announcements() {
       date: "January 2025",
       type: "Fee Structure",
       urgent: true,
-      link: "https://bvimit.co.in/bvimit/pdf/Fee%20Structure%201%20st%20Year%20Academic%202025-2026.pdf"
+      link: documentAssetPaths.feeStructureFirstYearAy2025_2026
     },
     {
       title: "MCA Brochure 2025-26 Available",
       date: "January 2025",
       type: "Information",
       urgent: false,
-      link: "https://bvimit.co.in/bvimit/pdf/MCABrochure2025.pdf"
+      link: documentAssetPaths.mcaBrochure2025
     },
     {
       title: "Scholarships Details 2025-2026",
       date: "January 2025",
       type: "Scholarship",
       urgent: false,
-      link: "https://bvimit.co.in/bvimit/pdf/Documents%20for%20Scholarship.pdf"
+      link: documentAssetPaths.scholarshipDocuments2025_2026
     },
     {
       title: "Industrial Visit to RedHat Bengaluru",
