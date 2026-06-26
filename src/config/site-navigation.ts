@@ -82,7 +82,7 @@ const aboutSectionLink = {
   href: "/#about",
 } satisfies SiteLink;
 const aboutPageLink = { label: "About Us", href: "/about" } satisfies SiteLink;
-const eventsLink = { label: "Events", href: "/#events" } satisfies SiteLink;
+const eventsLink = { label: "Events", href: "/events" } satisfies SiteLink;
 const departmentsLink = {
   label: "Departments",
   href: "/#departments",
@@ -123,10 +123,10 @@ const termsOfServiceLink = {
 const sitemapLink = { label: "Sitemap", href: "/sitemap" } satisfies SiteLink;
 
 export const institutionalHeaderUtilityLinks = [
-  { label: "Students", href: "/#students" },
+  { label: "Students", href: "/students" },
   alumniLink,
   { label: "Faculty", href: "/faculty" },
-  { label: "Media", href: "/#media" },
+  { label: "Media", href: "/media" },
 ] satisfies readonly SiteLink[];
 
 export const institutionalHeaderActionLinks = [
@@ -281,6 +281,42 @@ export const primaryNavigationItems = [
     ],
   },
   {
+    label: "Students",
+    href: "/students",
+    children: [
+      {
+        label: "Resources",
+        href: "/students/resources",
+        icon: FileText,
+        description: "Study materials and handbooks",
+      },
+      {
+        label: "Committees",
+        href: "/about/committees",
+        icon: Users,
+        description: "Student councils and cells",
+      },
+    ],
+  },
+  {
+    label: "Events",
+    href: "/events",
+    children: [
+      {
+        label: "Seminars",
+        href: "/events/seminars",
+        icon: Target,
+        description: "Academic and industry seminars",
+      },
+      {
+        label: "Conferences",
+        href: "/events/conferences",
+        icon: Globe,
+        description: "ICET, NCIT & Manthan",
+      },
+    ],
+  },
+  {
     label: "Faculty",
     href: "/faculty",
     description: "Meet our distinguished professors",
@@ -338,8 +374,9 @@ export const footerLinkGroups = [
       { label: "NBA Accreditation", href: "#" },
       { label: "University of Mumbai", href: "#" },
       { label: "Fee Structure", href: "/courses/mca" },
-      { label: "Scholarships", href: "/#announcements" },
-      { label: "Grievance Redressal", href: "#" },
+      { label: "Scholarships", href: "/admissions/scholarships" },
+      { label: "Grievance Redressal", href: "/grievance" },
+      { label: "Mandatory Disclosure", href: "/mandatory-disclosure" },
     ],
   },
 ] satisfies readonly FooterLinkGroup[];
@@ -435,7 +472,7 @@ export const sitemapLinkGroups = [
     icon: Mail,
     links: [
       contactLink,
-      { label: "Grievance Portal", href: "#" },
+      { label: "Grievance Portal", href: "/grievance" },
       { label: "Portal Inquiry", href: "/#portal" },
     ],
   },
