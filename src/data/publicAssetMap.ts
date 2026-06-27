@@ -48,26 +48,26 @@ export const legacyPublicAssetMap = {
     {
       id: "fee-structure-first-year-ay-2025-2026",
       legacyUrl:
-        "https://bvimit.co.in/bvimit/pdf/Fee%20Structure%201%20st%20Year%20Academic%202025-2026.pdf",
+        "/legacy/pdfs/Fee%20Structure%201%20st%20Year%20Academic%202025-2026.pdf",
       sourceFile: "pdf/Fee Structure 1 st Year Academic 2025-2026.pdf",
       publicPath: documentAssetPaths.feeStructureFirstYearAy2025_2026,
     },
     {
       id: "mca-brochure-2025",
-      legacyUrl: "https://bvimit.co.in/bvimit/pdf/MCABrochure2025.pdf",
+      legacyUrl: "/legacy/pdfs/MCABrochure2025.pdf",
       sourceFile: "pdf/MCABrochure2025.pdf",
       publicPath: documentAssetPaths.mcaBrochure2025,
     },
     {
       id: "scholarship-documents-2025-2026",
       legacyUrl:
-        "https://bvimit.co.in/bvimit/pdf/Documents%20for%20Scholarship.pdf",
+        "/legacy/pdfs/Documents%20for%20Scholarship.pdf",
       sourceFile: "pdf/Documents for Scholarship.pdf",
       publicPath: documentAssetPaths.scholarshipDocuments2025_2026,
     },
     {
       id: "mca-syllabus-ac20-21-uom",
-      legacyUrl: "https://bvimit.co.in/bvimit/pdf/MCAsyllabus%20AC20-21UOM.pdf",
+      legacyUrl: "/legacy/pdfs/MCAsyllabus%20AC20-21UOM.pdf",
       sourceFile: "pdf/MCAsyllabus AC20-21UOM.pdf",
       publicPath: documentAssetPaths.mcaSyllabusAc20_21Uom,
     },
@@ -76,9 +76,9 @@ export const legacyPublicAssetMap = {
     {
       id: "suhasini-vijaykumar",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Suhasini_Vijaykumar.jpg",
+        image: "/legacy/images/Staff/Suhasini_Vijaykumar.jpg",
         resume:
-          "https://bvimit.co.in/bvimit/facultyresume/Suhasini_Vijaykumar_One_Page_Format.pdf",
+          "/legacy/facultyresume/Suhasini_Vijaykumar_One_Page_Format.pdf",
       },
       sourceFile: {
         image: "images/Staff/Suhasini_Vijaykumar.JPG",
@@ -89,8 +89,8 @@ export const legacyPublicAssetMap = {
     {
       id: "jyoti-kharade",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Jyoti_Kharade.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/jyoti_up.pdf",
+        image: "/legacy/images/Staff/Jyoti_Kharade.jpg",
+        resume: "/legacy/facultyresume/jyoti_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/Jyoti_Kharade.JPG",
@@ -101,8 +101,8 @@ export const legacyPublicAssetMap = {
     {
       id: "priya-chandran",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Priya_Chandran.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/priys_up.pdf",
+        image: "/legacy/images/Staff/Priya_Chandran.jpg",
+        resume: "/legacy/facultyresume/priys_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/Priya_Chandran.JPG",
@@ -113,8 +113,8 @@ export const legacyPublicAssetMap = {
     {
       id: "shravani-pawar",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Shravani_Pawar.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/shravani_up.pdf",
+        image: "/legacy/images/Staff/Shravani_Pawar.jpg",
+        resume: "/legacy/facultyresume/shravani_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/Shravani Ma_am.JPG",
@@ -125,8 +125,8 @@ export const legacyPublicAssetMap = {
     {
       id: "pratibha-deshmukh",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Pratiba_Deshmukh.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/pratibha_up.pdf",
+        image: "/legacy/images/Staff/Pratiba_Deshmukh.jpg",
+        resume: "/legacy/facultyresume/pratibha_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/Pratibha_Mahindra_Deshmukh.JPG",
@@ -137,8 +137,8 @@ export const legacyPublicAssetMap = {
     {
       id: "shubhangi-mahadik",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Shubhangi_mahadik.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/shubhangi_up.pdf",
+        image: "/legacy/images/Staff/Shubhangi_mahadik.jpg",
+        resume: "/legacy/facultyresume/shubhangi_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/Shubhangi_Mahadik.JPG",
@@ -149,8 +149,8 @@ export const legacyPublicAssetMap = {
     {
       id: "sudeshna-roy",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Sudheshna_Roy.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/sudeshna_up.pdf",
+        image: "/legacy/images/Staff/Sudheshna_Roy.jpg",
+        resume: "/legacy/facultyresume/sudeshna_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/SudeshnaRoy.JPG",
@@ -161,8 +161,8 @@ export const legacyPublicAssetMap = {
     {
       id: "nidhi-poonia",
       legacyUrl: {
-        image: "https://bvimit.co.in/bvimit/facultyimage/Nidhi_Poonia.jpg",
-        resume: "https://bvimit.co.in/bvimit/facultyresume/nidhi_up.pdf",
+        image: "/legacy/images/Staff/Nidhi_Poonia.jpg",
+        resume: "/legacy/facultyresume/nidhi_up.pdf",
       },
       sourceFile: {
         image: "images/Staff/nidhi (2) (1).jpg",
