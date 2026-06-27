@@ -10,35 +10,35 @@ export const documentAssetPaths = {
 
 export const facultyAssetPaths = {
   "suhasini-vijaykumar": {
-    image: "/assets/faculty/images/suhasini-vijaykumar.jpg",
+    image: "/legacy/images/Staff/Suhasini Ma_am.JPG",
     resume: "/assets/faculty/resumes/suhasini-vijaykumar.pdf",
   },
   "jyoti-kharade": {
-    image: "/assets/faculty/images/jyoti-kharade.jpg",
+    image: "/legacy/images/Staff/Jyoti Ma_am (2).JPG",
     resume: "/assets/faculty/resumes/jyoti-kharade.pdf",
   },
   "priya-chandran": {
-    image: "/assets/faculty/images/priya-chandran.jpg",
+    image: "/legacy/images/Staff/Priya Ma_am (2).JPG",
     resume: "/assets/faculty/resumes/priya-chandran.pdf",
   },
   "shravani-pawar": {
-    image: "/assets/faculty/images/shravani-pawar.jpg",
+    image: "/legacy/images/Staff/Shravani Ma_am.JPG",
     resume: "/assets/faculty/resumes/shravani-pawar.pdf",
   },
   "pratibha-deshmukh": {
-    image: "/assets/faculty/images/pratibha-deshmukh.jpg",
+    image: "/legacy/images/Staff/Pratibha Ma_am (2).JPG",
     resume: "/assets/faculty/resumes/pratibha-deshmukh.pdf",
   },
   "shubhangi-mahadik": {
-    image: "/assets/faculty/images/shubhangi-mahadik.jpg",
+    image: "/legacy/images/Staff/Shubhangi Ma_am (2).JPG",
     resume: "/assets/faculty/resumes/shubhangi-mahadik.pdf",
   },
   "sudeshna-roy": {
-    image: "/assets/faculty/images/sudeshna-roy.jpg",
+    image: "/legacy/images/Staff/Sudheshna Ma_am.JPG",
     resume: "/assets/faculty/resumes/sudeshna-roy.pdf",
   },
   "nidhi-poonia": {
-    image: "/assets/faculty/images/nidhi-poonia.jpg",
+    image: "/legacy/images/Staff/nidhi (2) (1).jpg",
     resume: "/assets/faculty/resumes/nidhi-poonia.pdf",
   },
 } as const;

@@ -42,3 +42,5 @@ Thumbs.db
 # Ignore legacy files (too large for git)
 public/legacy/
 public/assets/documents/
+
+

@@ -33,11 +33,14 @@ const schema = defineSchema(
     }).index("email", ["email"]), // index for the email. do not remove or modify
 
     // add other tables here
-
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    enquiries: defineTable({
+      name: v.string(),
+      email: v.string(),
+      phone: v.string(),
+      subject: v.string(),
+      message: v.string(),
+      timestamp: v.number(),
+    }),
   },
   {
     schemaValidation: false,

@@ -12,7 +12,7 @@ const regex = /"\/legacy\/([^"]+)"/g;
 const matches = [...content.matchAll(regex)].map(m => m[1]);
 const uniqueMatches = [...new Set(matches)];
 
-const legacyDir = path.resolve(__dirname, '../../bvimit');
+const legacyDir = path.resolve(__dirname, '../../IMIT Web');
 const publicDir = path.resolve(__dirname, '../public/legacy');
 
 if (!fs.existsSync(publicDir)) {

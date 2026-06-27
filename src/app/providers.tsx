@@ -13,6 +13,14 @@ import dynamic from "next/dynamic";
 
 const Chatbot = dynamic(() => import("@/components/common/Chatbot"), { ssr: false });
 
+import { ConvexReactClient, ConvexProvider } from "convex/react";
+
+const convex = new ConvexReactClient(
+  process.env.NEXT_PUBLIC_CONVEX_URL ||
+  process.env.VITE_CONVEX_URL ||
+  "https://harmless-tapir-303.convex.cloud"
+);
+
 function RouteSyncer() {
     const pathname = usePathname();
 
@@ -50,28 +58,30 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <VlyToolbar />
             <InstrumentationProvider>
-                <LoadingScreen />
-                <RouteSyncer />
-                {mounted ? (
-                    <AnimatePresence mode="popLayout">
-                        <motion.div
-                            key={pathname}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2, ease: "easeOut" }}
-                            className="relative min-h-screen"
-                        >
+                <ConvexProvider client={convex}>
+                    <LoadingScreen />
+                    <RouteSyncer />
+                    {mounted ? (
+                        <AnimatePresence mode="popLayout">
+                            <motion.div
+                                key={pathname}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2, ease: "easeOut" }}
+                                className="relative min-h-screen"
+                            >
+                                {children}
+                            </motion.div>
+                        </AnimatePresence>
+                    ) : (
+                        <div key="initial-mount">
                             {children}
-                        </motion.div>
-                    </AnimatePresence>
-                ) : (
-                    <div key="initial-mount">
-                        {children}
-                    </div>
-                )}
-                <Chatbot />
-                <Toaster />
+                        </div>
+                    )}
+                    <Chatbot />
+                    <Toaster />
+                </ConvexProvider>
             </InstrumentationProvider>
         </ThemeProvider>
     );

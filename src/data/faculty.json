@@ -2,46 +2,57 @@
   {
     "id": "suhasini-vijaykumar",
     "name": "Dr. Suhasini Vijaykumar",
-    "designation": "Principal and Professor",
-    "qualification": "MCA, PHD(COMPUTER SCIENCE)",
-    "experience": "25 years",
-    "expertise": "DATA MINING, ADVANCED DATABASE SYSTEMS, ARTIFICIAL INTELLIGENCE, MACHINE LEARNING, DEEP LEARNING, INFORMATION SECURITY, COMPUTER NETWORKS, WIRELESS COMMUNICATIONS.",
+    "designation": "Principal & Professor",
+    "qualification": "Master of Computer Applications, Ph.D",
+    "experience": "22 years",
+    "expertise": "Computer Networks, Wireless Technology and Mobile Communication, Network Security, Spatial Data Mining",
     "email": "principal.bvimit@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Suhasini_Vijaykumar.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/Suhasini_Vijaykumar_One_Page_Format.pdf"
+    "image": "/legacy/images/Staff/Suhasini Ma_am.JPG",
+    "resume": "/legacy/facultyresume/suhasini_vijaykumar.pdf"
   },
   {
     "id": "jyoti-kharade",
     "name": "Dr. Jyoti Kharade",
     "designation": "Vice-Principal / Associate Professor",
     "qualification": "MCA, MPhil, Ph.D",
-    "experience": "21 years",
-    "expertise": "Introduction to Web Technology, Object Oriented Programming, Core and Advance Java, Software Engineering.",
+    "experience": "17 years",
+    "expertise": "Introduction to Web Technology, Object Oriented Programming, Core and Advance Java, Software Engineering",
     "email": "jyoti.kharade@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Jyoti_Kharade.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/jyoti_up.pdf"
+    "image": "/legacy/images/Staff/Jyoti Ma_am (2).JPG",
+    "resume": "/legacy/facultyresume/Jyoti .pdf"
+  },
+  {
+    "id": "uttara-athawale",
+    "name": "Ms. Uttara Athawale",
+    "designation": "Assistant Professor",
+    "qualification": "MCA, MSc.(Mathematics)",
+    "experience": "16.5 years",
+    "expertise": "Computer Graphics, Image Processing",
+    "email": "uttara.athawale@bharatividyapeeth.edu",
+    "image": "/legacy/images/Staff/Uttara_Athawale.jpg",
+    "resume": "/legacy/facultyresume/uttara-athawale.pdf"
   },
   {
     "id": "priya-chandran",
     "name": "Dr. Priya Chandran",
     "designation": "Associate Professor",
-    "qualification": "PhD in Computer Science, MCA, M Phil",
+    "qualification": "Pursuing PhD in Computer Science, MCA, M Phil",
     "experience": "20 years",
-    "expertise": "Advanced Database Management System, Data Mining, Artificial Intelligence, Machine Learning, Big Data Analytics and Visualization, Deep Learning.",
+    "expertise": "Advanced Database Management System, Data Mining, Artificial Intelligence, Machine Learning, Big Data Analytics and Visualization, Deep Learning",
     "email": "priya.chandran@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Priya_Chandran.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/priys_up.pdf"
+    "image": "/legacy/images/Staff/Priya Ma_am (2).JPG",
+    "resume": "/legacy/facultyresume/Priya_resume_1page.pdf"
   },
   {
     "id": "shravani-pawar",
     "name": "Ms. Shravani Pawar",
     "designation": "Assistant Professor",
-    "qualification": "MCA",
+    "qualification": "Pursuing PhD , M.C.A. ,M.Phil.",
     "experience": "15 years",
-    "expertise": "Programming in C, Python, Web Technologies, Mobile Application Development.",
+    "expertise": "C, Object Oriented Programming with C++, Data Structures, Software Project Management, Software Engineering",
     "email": "shravani.pawar@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Shravani_Pawar.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/shravani_up.pdf"
+    "image": "/legacy/images/Staff/Shravani Ma_am.JPG",
+    "resume": "/legacy/facultyresume/Shravani_one_page_format.pdf"
   },
   {
     "id": "pratibha-deshmukh",
@@ -49,10 +60,10 @@
     "designation": "Associate Professor",
     "qualification": "PhD, MCA",
     "experience": "18 years",
-    "expertise": "Networking, Operating Systems, Cloud Computing, IoT.",
+    "expertise": "Networking, Operating Systems, Cloud Computing, IoT",
     "email": "pratibha.deshmukh@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Pratiba_Deshmukh.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/pratibha_up.pdf"
+    "image": "/legacy/images/Staff/Pratibha Ma_am (2).JPG",
+    "resume": "/legacy/facultyresume/Dr. PratibhaOnePageCV1.pdf"
   },
   {
     "id": "shubhangi-mahadik",
@@ -60,10 +71,10 @@
     "designation": "Assistant Professor",
     "qualification": "MCA",
     "experience": "12 years",
-    "expertise": "Software Project Management, MIS, Database Management.",
+    "expertise": "Software Project Management, MIS, Database Management",
     "email": "shubhangi.mahadik@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Shubhangi_mahadik.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/shubhangi_up.pdf"
+    "image": "/legacy/images/Staff/Shubhangi Ma_am (2).JPG",
+    "resume": "/legacy/facultyresume/shubhangi_mahadik (1).pdf"
   },
   {
     "id": "sudeshna-roy",
@@ -71,10 +82,10 @@
     "designation": "Assistant Professor",
     "qualification": "M.Sc (CS), M.Phil",
     "experience": "14 years",
-    "expertise": "Mathematics for Computer Science, Algorithms, Discrete Structure.",
+    "expertise": "Mathematics for Computer Science, Algorithms, Discrete Structure",
     "email": "sudeshna.roy@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Sudheshna_Roy.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/sudeshna_up.pdf"
+    "image": "/legacy/images/Staff/Sudheshna Ma_am.JPG",
+    "resume": "/legacy/facultyresume/Sudeshna1.pdf"
   },
   {
     "id": "nidhi-poonia",
@@ -82,9 +93,141 @@
     "designation": "Assistant Professor",
     "qualification": "MCA",
     "experience": "10 years",
-    "expertise": "Object Oriented Concepts, C++, Java Programming.",
+    "expertise": "Object Oriented Concepts, C++, Java Programming",
     "email": "nidhi.poonia@bharatividyapeeth.edu",
-    "image": "https://bvimit.co.in/bvimit/facultyimage/Nidhi_Poonia.jpg",
-    "resume": "https://bvimit.co.in/bvimit/facultyresume/nidhi_up.pdf"
+    "image": "/legacy/images/Staff/nidhi (2) (1).jpg",
+    "resume": "/legacy/facultyresume/nidhi _up.pdf"
+  },
+  {
+    "id": "anushree-goud",
+    "name": "Mrs. Anushree Goud",
+    "designation": "Assistant Professor",
+    "qualification": "Pursuing PhD , BE[Information Technology], Mtech[Computer Science and Engineering], UGC NET",
+    "experience": "3 years",
+    "expertise": "Object Oriented Programming, Computer Network, Mobile Application Development, Data Structure",
+    "email": "anushree.anushree.goud@gmail.com",
+    "image": "/legacy/images/Staff/Anushree.JPG",
+    "resume": "/legacy/facultyresume/Anushree (1).pdf"
+  },
+  {
+    "id": "rasika-patil",
+    "name": "Mrs. Rasika Patil",
+    "designation": "Assistant Professor",
+    "qualification": "Pursuing PhD, BSc, MCA",
+    "experience": "4 years",
+    "expertise": "Web Technology, Object Oriented Programming using C++, Data Structure, Software Engineering, .NET",
+    "email": "rasikarj.mca@gmail.com",
+    "image": "/legacy/images/Staff/Rasika Ma_am.JPG",
+    "resume": "/legacy/facultyresume/Rasika.pdf"
+  },
+  {
+    "id": "mayuri-dendge",
+    "name": "Ms. Mayuri Dendge",
+    "designation": "Assistant Professor",
+    "qualification": "Pursuing PhD, BCA, MCA",
+    "experience": "4.5 years",
+    "expertise": "Software Engineering, Computer Fundamental, Green Computing, Networking, Mathematics and Statistics",
+    "email": "mayuridendge@gmail.com",
+    "image": "/legacy/images/Staff/Mayuri.jpg",
+    "resume": "/legacy/facultyresume/mayuri-resume.pdf"
+  },
+  {
+    "id": "abhijit-desai",
+    "name": "Mr. Abhijit S. Desai",
+    "designation": "Assistant Professor",
+    "qualification": "Pursuing PhD, BSc, MCA",
+    "experience": "14 years",
+    "expertise": "Data Mining, Business Intelligence, IT for Management, Software Engineering, Knowledge Management",
+    "email": "asdesai.bvimit@gmail.com",
+    "image": "/legacy/images/Staff/ASDesai.jpg",
+    "resume": "/legacy/facultyresume/AbhijitDesai (1).pdf"
+  },
+  {
+    "id": "alok-shah",
+    "name": "Mr. Alok Shah",
+    "designation": "Assistant Professor",
+    "qualification": "Pursuing PhD, MCA",
+    "experience": "10 years",
+    "expertise": "Programming Languages, Software Development",
+    "email": "alokshah1982@gmail.com",
+    "image": "/legacy/images/Staff/alokshah.jpg",
+    "resume": "/legacy/facultyresume/alokshah.jpg"
+  },
+  {
+    "id": "kirti-muley",
+    "name": "Dr. Kirti Muley",
+    "designation": "Assistant Professor",
+    "qualification": "Ph.D, M.Tech, MCA",
+    "experience": "10 years",
+    "expertise": "Software Engineering, Distributed Systems, Mobile Communication, Operating Systems, Data Mining",
+    "email": "kirti.muley@bharatividyapeeth.edu",
+    "image": "/legacy/images/Staff/kirti.jpg",
+    "resume": "/legacy/facultyresume/kirti.pdf"
+  },
+  {
+    "id": "manish-dubey",
+    "name": "Mr. Manish Kumar Dubey",
+    "designation": "Assistant Professor",
+    "qualification": "MCA",
+    "experience": "14.6 years",
+    "expertise": "COA, Data Structure, DBMS, Computer Graphics, Multimedia",
+    "email": "manish.dubey@bharatividyapeeth.edu",
+    "image": "/legacy/images/Staff/Manish Sir.JPG",
+    "resume": "/legacy/facultyresume/ManishDubey (1).pdf"
+  },
+  {
+    "id": "gunjan-behl",
+    "name": "Ms. Gunjan Behl",
+    "designation": "Assistant Professor",
+    "qualification": "MCA, M.Phil, Pursuing PhD",
+    "experience": "10 years",
+    "expertise": "Software Project Management, Software Testing, Software Engineering, Object Oriented Analysis & Design using UML, Operating Systems",
+    "email": "mailto.gunjan83@gmail.com",
+    "image": "/legacy/images/Staff/GB PIC.PNG",
+    "resume": "/legacy/facultyresume/gunjan.pdf"
+  },
+  {
+    "id": "shambhu-rai",
+    "name": "Dr. Shambhu Shankar Rai",
+    "designation": "Assistant Professor",
+    "qualification": "MCA, M.Phil, Pursuing PhD",
+    "experience": "11 years",
+    "expertise": "Dot Net Technologies, Software Engineering, Operating Systems, C++, C#, C Programming, Object Oriented Programming",
+    "email": "shambhumca1@gmail.com",
+    "image": "/legacy/images/Staff/Shambhu Sir.JPG",
+    "resume": "/legacy/images/Staff/ssrai.jpg"
+  },
+  {
+    "id": "deepali-shahane",
+    "name": "Dr. Deepali Shahane",
+    "designation": "Assistant Professor",
+    "qualification": "B.E., MCM, M.Phil, Ph.D",
+    "experience": "21 years",
+    "expertise": "Software Engineering, UML, RDBMS with Oracle, DBMS, IT Management, Green Computing",
+    "email": "shahanedeepali@gmail.com",
+    "image": "/legacy/images/Staff/deepali.jpg",
+    "resume": "/legacy/facultyresume/Deepali Shahane_.pdf"
+  },
+  {
+    "id": "sampat-vaidya",
+    "name": "Mr. Sampat Govind Vaidya",
+    "designation": "Adjunct Faculty",
+    "qualification": "M.Sc. (Maths), Ph.D (Mathematics-Pre Thesis Syn Submitted)",
+    "experience": "36 years",
+    "expertise": "Solving Science and Engineering problems, Development of Simulator & Mathematical modeling",
+    "email": "vaidya@bvimit.com",
+    "image": "/legacy/images/Staff/Sampat_Govind_Vaidya.JPG",
+    "resume": "/legacy/facultyresume/sampatvaidya.pdf"
+  },
+  {
+    "id": "gayatri-potdar",
+    "name": "Mrs. Gayatri Samir Potdar",
+    "designation": "Visiting Faculty",
+    "qualification": "MCA",
+    "experience": "6 years",
+    "expertise": "C, C++, Java, Data Structures, Python, Android, Software Engineering",
+    "email": "gayatrispotdar@gmail.com",
+    "image": "/legacy/images/Staff/GAYATRI.jpg",
+    "resume": "/legacy/images/Staff/GAYATRI.jpg"
   }
 ]
